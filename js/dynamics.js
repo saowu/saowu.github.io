@@ -129,7 +129,7 @@
                 if (isSVG && svgProperties.contains(k)) {
                     el.setAttribute(k, v);
                 } else {
-                    // el.style[propertyWithPrefix(k)] = v;
+                    el.style[propertyWithPrefix(k)] = v;
                 }
             }
         }
