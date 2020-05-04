@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>后浪|saowu's Blog</title>
+    <link rel="shortcut icon" href="https://saowu.top/blog/favicon.ico?v=1586680621784">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://saowu.top/blog/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162711560-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-162711560-1');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="main-content">
+        <div class="site-header">
+            <a href="https://saowu.top/blog">
+                <img class="avatar" src="https://saowu.top/blog/images/avatar.png?v=1586680621784" alt="">
+            </a>
+            <h1 class="site-title">
+                saowu&#39;s Blog
+            </h1>
+            <p class="site-description">
+                A programmer who wants to be happy and muddle along
+            </p>
+            <div class="menu-container">
+                <a href="/blog" class="menu">
+                    首页
+                </a>
+                <a href="/blog/archives" class="menu">
+                    归档
+                </a>
+                <a href="/blog/tags" class="menu">
+                    标签
+                </a>
+                <a href="/blog/about" class="menu">
+                    关于
+                </a>
+                <a href="/reptiles/china_map.html" class="menu">
+                    nCoV肺炎
+                </a>
+            </div>
+            <div class="social-container">
+                <a href="https://github.com/saowu" target="_blank">
+                    <i class="ri-github-line"></i>
+                </a>
+                <a href="https://weibo.com/u/6635817704" target="_blank">
+                    <i class="ri-weibo-line"></i>
+                </a>
+                <a href="https://www.zhihu.com/people/43703339aec7960c1020ba061888a016" target="_blank">
+                    <i class="ri-zhihu-line"></i>
+                </a>
+            </div>
+        </div>
+        <div class="post-detail">
+            <iframe src="//player.bilibili.com/player.html?aid=412935552&bvid=BV1FV411d7u7&cid=186803402&page=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+                    style="width: 100%;height: 500px"></iframe>
+        </div>
+        <div class="site-footer">
+            <p>Copyright 2020 saowu</p>
+            <p>Any and all opinions listed here are my own and not representative of my employers; future, past and
+                present.</p>
+            <a class="rss" href="https://saowu.top/blog/atom.xml" target="_blank">
+                <i class="ri-rss-line"></i> RSS
+            </a>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </div>
+</div>
+<script>
+    hljs.initHighlightingOnLoad();
+
+    let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+            let section = document.getElementById(decodeURI(link.hash).substring(1));
+            let nextSection = null
+            if (mainNavLinks[index + 1]) {
+                nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+            }
+            if (section.offsetTop <= fromTop) {
+                if (nextSection) {
+                    if (nextSection.offsetTop > fromTop) {
+                        link.classList.add("current");
+                    } else {
+                        link.classList.remove("current");
+                    }
+                } else {
+                    link.classList.add("current");
+                }
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
