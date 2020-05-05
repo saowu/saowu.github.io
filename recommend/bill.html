@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bill</title>
+    <title>Bill|saowu's Blog</title>
     <link rel="stylesheet" href="../css/bill.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.qrcode.min.js"></script>
@@ -12,7 +12,7 @@
 <div class="content">
     <div class="coupon">
         <div class="coupon-top">
-            <img class="hd" src="https://bing.ioliu.cn/v1/rand" alt="">
+            <img class="hd" src="">
             <div class="head-font">bilibili献给新一代的演讲《后浪》</div>
             <img class="avatar" src="../images/avatar.png" alt="">
             <div class="body-font"><b>投河的公鸡 推荐给你</b></div>
@@ -26,6 +26,31 @@
 </div>
 <a id="saveImg" style="display: none"></a>
 <script type="text/javascript">
+
+
+    $(document).ready(function () {
+        function image2Base64(img) {
+            let canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            let ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, img.width, img.height);
+            return canvas.toDataURL("image/png");
+        }
+
+        function getImgBase64() {
+            let base64 = "";
+            let img = new Image();
+            img.crossOrigin = "";
+            img.src = "http://esc.saowu.top:9000/v1/rand";
+            img.onload = function () {
+                base64 = image2Base64(img);
+                $('.hd').attr('src', base64);
+            }
+        }
+
+        getImgBase64();
+    });
     window.onload = function () {
         let title = decodeURI(window.location.href.split("?")[1].split("=")[1]);
         $(".head-font").html(title);
@@ -41,16 +66,12 @@
         });
         html2canvas($('.content'), {
             useCORS: true,
-            allowTaint: false,
-            tainttest: true,
-            logging: false,
             onrendered: function (canvas) {
-                let pageData = canvas.toDataURL("image/png");
+                let pageData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
                 let triggerDownload = $("#saveImg").attr("href", pageData).attr("download", new Date().getTime() + ".png");
                 triggerDownload[0].click();
             }
         });
-        // window.close();
     }
 </script>
 </body>
