@@ -1,0 +1,131 @@
+.coupon {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 30px;
+
+}
+
+.coupon-top {
+    /*float:left;*/
+    width: 1380px;
+    height: 1650px;
+    position: relative;
+    background: white;
+}
+
+.coupon-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background: radial-gradient(circle at left bottom, transparent 30px, #fff 10px, #fff 10px)
+}
+
+.coupon-top::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 50%;
+    background: radial-gradient(circle at right bottom, transparent 30px, #fff 10px, #fff 10px)
+}
+
+.coupon-con {
+    /*float:left;*/
+    width: 1380px;
+    height: 330px;
+    position: relative;
+    border-top: dashed;
+    border-width: 2px;
+    border-color: white;
+    background: white;
+}
+
+.coupon-con::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background: radial-gradient(circle at left top, transparent 30px, black 10px, #fff 10px)
+}
+
+.coupon-con::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 50%;
+    background: radial-gradient(circle at right top, transparent 30px, black 10px, #fff 10px)
+}
+
+.hd {
+    z-index: 2;
+    position: absolute;
+    width: 1380px;
+    height: 1380px;
+}
+
+.avatar {
+    z-index: 2;
+    position: absolute;
+    margin-top: 1380px;
+    margin-left: 90px;
+    width: 210px;
+    height: 210px;
+}
+
+.head-font {
+    z-index: 2;
+    position: absolute;
+    margin-top: 1200px;
+    margin-left: 90px;
+    color: #ffffff;
+    font-size:80px;
+}
+
+.body-font {
+    z-index: 2;
+    position: absolute;
+    margin-top: 1480px;
+    margin-left: 300px;
+    color: darkslategrey;
+    font-size: 60px;
+}
+
+.qrcode-font {
+    z-index: 2;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 420px;
+    color: grey;
+}
+
+.dotted {
+    margin-top: 1620px;
+    position: absolute;
+    z-index: 2;
+    width: 1380px;
+}
+
+.qrcode {
+    z-index: 2;
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+.content {
+    z-index: 2;
+    position: absolute;
+    padding: 90px;
+    background: grey;
+    width: 1385px;
+    height: 1980px;
+}

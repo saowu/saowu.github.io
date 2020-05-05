@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill</title>
+    <link rel="stylesheet" href="../css/bill.css">
+</head>
+<body>
+<div class="content">
+    <div class="coupon">
+        <div class="coupon-top">
+            <img class="hd" src="../images/billbg.jpg" alt="">
+            <div class="head-font">bilibili献给新一代的演讲《后浪》</div>
+            <img class="avatar" src="../images/avatar.png" alt="">
+            <div class="body-font"><b>投河的公鸡 推荐给你</b></div>
+            <img class="dotted" src="../images/dotted.png" alt="">
+        </div>
+        <div class="coupon-con">
+            <span class="qrcode"></span>
+            <span class="qrcode-font"><h4>长按识别二维码浏览<br>saowu's Blog</h4></span>
+        </div>
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="../js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        let title = decodeURI(window.location.href.split("?")[1].split("=")[1]);
+        $(".head-font").html(title);
+        jQuery('.qrcode').qrcode({
+            width: 240,
+            height: 240,
+            correctLevel: 0,
+            image: $(".avatar")[0],
+            render: "canvas",
+            background: "#ffffff",
+            foreground: "darkslategrey",
+            text: document.referrer
+        });
+        html2canvas($('.content'), {
+            useCORS: true,
+            logging: true,
+            onrendered: function (canvas) {
+                let pageData = canvas.toDataURL();
+                saveFile(pageData.replace("image/jpeg", "image/octet-stream"), new Date().getTime() + ".jpeg");
+                window.history.go(-1);
+            }
+        });
+    });
+
+    function saveFile(data, filename) {
+        let save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+        save_link.href = data;
+        save_link.download = filename;
+        var event = document.createEvent('MouseEvents');
+        event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        save_link.dispatchEvent(event);
+    }
+</script>
+</body>
+</html>
+
+
