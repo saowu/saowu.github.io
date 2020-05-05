@@ -44,7 +44,7 @@
             onrendered: function (canvas) {
                 let pageData = canvas.toDataURL();
                 saveFile(pageData.replace("image/jpeg", "image/octet-stream"), new Date().getTime() + ".jpeg");
-                window.history.go(-1);
+                // window.history.go(-1);
             }
         });
     });
