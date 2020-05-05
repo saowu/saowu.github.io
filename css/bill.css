@@ -69,6 +69,7 @@
     position: absolute;
     width: 1380px;
     height: 1380px;
+    object-fit: cover;
 }
 
 .avatar {
