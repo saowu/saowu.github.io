@@ -87,7 +87,11 @@
     margin-top: 1200px;
     margin-left: 90px;
     color: #ffffff;
-    font-size:80px;
+    font-size: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 1200px;
 }
 
 .body-font {
