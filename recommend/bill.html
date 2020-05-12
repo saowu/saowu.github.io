@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Bill|saowu's Blog</title>
-    <link rel="stylesheet" href="../css/bill.css">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/jquery.qrcode.min.js"></script>
-    <script src="../js/html2canvas.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/css/bill.css">
+    <script src="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/js/jquery.qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/js/html2canvas.js"></script>
 </head>
 <body>
 <div class="content">
@@ -14,9 +14,9 @@
         <div class="coupon-top">
             <img class="hd" src="">
             <div class="head-font">bilibili献给新一代的演讲《后浪》</div>
-            <img class="avatar" src="../images/avatar.png" alt="">
+            <img class="avatar" src="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/images/avatar.png" alt="">
             <div class="body-font"><b>投河的公鸡 推荐给你</b></div>
-            <img class="dotted" src="../images/dotted.png" alt="">
+            <img class="dotted" src="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/images/dotted.png" alt="">
         </div>
         <div class="coupon-con">
             <span class="qrcode"></span>
@@ -52,8 +52,8 @@
         getImgBase64();
     });
     window.onload = function () {
-        let title = decodeURI(window.location.href.split("?")[1].split("=")[1]);
-        $(".head-font").html(title);
+        // let title = decodeURI(window.location.href.split("?")[1].split("=")[1]);
+        // $(".head-font").html(title);
         jQuery('.qrcode').qrcode({
             width: 240,
             height: 240,
