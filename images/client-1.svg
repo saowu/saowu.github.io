@@ -1,21 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>client-1</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Personal-1-mixed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
-        <g transform="translate(-420.000000, -4934.000000)" fill-rule="nonzero" id="clients">
-            <g transform="translate(350.000000, 4446.000000)">
-                <g id="Group-5" transform="translate(59.000000, 487.000000)">
-                    <g id="client-1" transform="translate(11.000000, 1.000000)">
-                        <path d="M45.6000835,0 L2.39981217,0 C1.07134845,0 0,1.07144814 0,2.40001043 L0,45.5999896 C0,46.9285519 1.07134845,48 2.39981217,48 L45.6000835,48 C46.9286516,48 48,46.9285519 48,45.5999896 L48,2.40001043 C48,1.07144814 46.9286516,0 45.6000835,0" id="Path" fill="#282642"></path>
-                        <rect id="Rectangle" fill="#FFFFFF" x="14" y="14" width="5" height="21.2"></rect>
-                        <rect id="Rectangle" fill="#FFFFFF" x="22" y="30" width="13" height="5"></rect>
-                        <rect id="Rectangle" fill="#FFFFFF" x="22" y="22" width="13" height="5"></rect>
-                        <rect id="Rectangle" fill="#FFFFFF" x="22" y="14" width="13" height="5"></rect>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg t="1592726755973" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="691" width="48" height="48"><path d="M668.8 640c0 97.6-91.2 94.4-100.8 94.4H382.4V547.2h185.6c97.6 0 100.8 73.6 100.8 92.8z m-115.2-168c1.6 0 88 1.6 88-83.2 0-35.2-8-81.6-88-81.6H382.4v164.8h171.2zM1024 171.2v683.2C1024 947.2 947.2 1024 852.8 1024H171.2C76.8 1024 0 947.2 0 852.8V171.2C0 76.8 76.8 0 171.2 0h683.2C947.2 0 1024 76.8 1024 171.2zM772.8 652.8c0-49.6-14.4-132.8-112-153.6v-1.6c52.8-22.4 84.8-64 84.8-126.4 0-16 4.8-148.8-177.6-148.8H278.4v596.8c292.8 0 320 3.2 374.4-12.8 32-9.6 120-40 120-153.6z" p-id="692" fill="#bfbfbf"></path></svg>
