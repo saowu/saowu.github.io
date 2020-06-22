@@ -106,31 +106,32 @@
             <!-- intro -->
             <div class="intro">
                 <!-- avatar image -->
-                <img src="images/avatar-1.svg" alt="saowu" class="mb-4"/>
+                <img src="images/avatar-1.svg" :alt="name" class="mb-4"/>
 
                 <!-- info -->
-                <h1 class="mb-2 mt-0">saowu</h1>
-                <span>I'm a prospective <span class="text-rotating">Python developer, Java developer</span>.</span>
+                <h1 class="mb-2 mt-0">{{name}}</h1>
+                <span>I'm a  <span
+                        class="text-rotating">prospective Python developer,prospective Java developer,university student</span>.</span>
 
                 <!-- social icons -->
                 <ul class="social-icons light list-inline mb-0 mt-4">
                     <li class="list-inline-item">
-                        <a href="http://wpa.qq.com/msgrd?v=3&uin=786021717&site=qq&menu=yes" target="_blank">
+                        <a :href="['http://wpa.qq.com/msgrd?v=3&uin='+qq+'&site=qq&menu=yes']" target="_blank">
                             <i class="fab fa-qq"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="images/wxqrcode.png" class="work-image">
+                        <a :href="wechart" class="work-image">
                             <i class="fab fa-weixin thumb"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="https://github.com/saowu" target="_blank">
+                        <a :href="github" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="blog/" target="_blank">
+                        <a :href="blog" target="_blank">
                             <i class="fab fa-blogger"></i>
                         </a>
                     </li>
@@ -139,7 +140,7 @@
 
                 <!-- buttons -->
                 <div class="mt-4">
-                    <a href="mailto:saowu.gan@qq.com" class="btn btn-default">Contact Me</a>
+                    <a :href="['mailto:'+mail]" class="btn btn-default">Contact Me</a>
                 </div>
             </div>
 
@@ -244,56 +245,26 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <!-- about text -->
-                                <p>
-                                    从2016年到如今的技术积累过程中，不断的入门，又不断的放弃，隔天再忿忿的捡起。在这个光怪陆离的世界中，依旧还是个不起眼的菜鸟，希望以后能保持平常心，继续坚持学习，迎接未来！！！</p>
+                                <p>{{description}}</p>
                                 <div class="mt-3">
-                                    <a href="cv/cv.html" target="_blank" class="btn btn-default">View Resume</a>
+                                    <a :href="cv" target="_blank" class="btn btn-default">View Resume</a>
                                 </div>
                                 <div class="spacer d-md-none d-lg-none" data-height="30"></div>
                             </div>
                             <div class="col-md-6">
                                 <!-- skill item -->
-                                <div class="skill-item">
+                                <div class="skill-item" v-for="skill in skills">
                                     <div class="skill-info clearfix">
-                                        <h4 class="float-left mb-3 mt-0">Java</h4>
-                                        <span class="float-right">75%</span>
+                                        <h4 class="float-left mb-3 mt-0">{{skill.key}}</h4>
+                                        <span class="float-right">{{skill.val+'%'}}</span>
                                     </div>
                                     <div class="progress">
                                         <div class="progress-bar data-background" role="progressbar" aria-valuemin="0"
                                              aria-valuemax="100"
-                                             aria-valuenow="85" data-color="#FFD15C">
+                                             :aria-valuenow="skill.val" :data-color="skill.color">
                                         </div>
                                     </div>
                                     <div class="spacer" data-height="20"></div>
-                                </div>
-
-                                <!-- skill item -->
-                                <div class="skill-item">
-                                    <div class="skill-info clearfix">
-                                        <h4 class="float-left mb-3 mt-0">Python</h4>
-                                        <span class="float-right">50%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar data-background" role="progressbar" aria-valuemin="0"
-                                             aria-valuemax="100"
-                                             aria-valuenow="50" data-color="#FF4C60">
-                                        </div>
-                                    </div>
-                                    <div class="spacer" data-height="20"></div>
-                                </div>
-
-                                <!-- skill item -->
-                                <div class="skill-item">
-                                    <div class="skill-info clearfix">
-                                        <h4 class="float-left mb-3 mt-0">Linux</h4>
-                                        <span class="float-right">40%</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar data-background" role="progressbar" aria-valuemin="0"
-                                             aria-valuemax="100"
-                                             aria-valuenow="40" data-color="#6C6CE5">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -306,52 +277,16 @@
             <div class="spacer" data-height="70"></div>
 
             <div class="row">
-
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6" v-for="stat in statistics">
                     <!-- fact item -->
                     <div class="fact-item">
-                        <span class="icon icon-fire"></span>
+                        <span class="icon" :class="stat.icon"></span>
                         <div class="details">
-                            <h3 class="mb-0 mt-0 number"><em class="count">2016</em></h3>
-                            <p class="mb-0">Started</p>
+                            <h3 class="mb-0 mt-0 number"><em class="count">{{stat.val}}</em></h3>
+                            <p class="mb-0">{{stat.key}}</p>
                         </div>
                     </div>
                     <div class="spacer d-md-none d-lg-none" data-height="30"></div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <!-- fact item -->
-                    <div class="fact-item">
-                        <span class="icon icon-social-github"></span>
-                        <div class="details">
-                            <h3 class="mb-0 mt-0 number"><em class="count">23</em></h3>
-                            <p class="mb-0">Repositories</p>
-                        </div>
-                    </div>
-                    <div class="spacer d-md-none d-lg-none" data-height="30"></div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <!-- fact item -->
-                    <div class="fact-item">
-                        <span class="icon icon-music-tone-alt"></span>
-                        <div class="details">
-                            <h3 class="mb-0 mt-0 number"><em class="count">4027</em></h3>
-                            <p class="mb-0">Music</p>
-                        </div>
-                    </div>
-                    <div class="spacer d-md-none d-lg-none" data-height="30"></div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <!-- fact item -->
-                    <div class="fact-item">
-                        <span class="icon icon-book-open"></span>
-                        <div class="details">
-                            <h3 class="mb-0 mt-0 number"><em class="count">31</em></h3>
-                            <p class="mb-0">Articles</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -428,36 +363,15 @@
                     <div class="timeline edu bg-white rounded shadow-dark padding-30 overflow-hidden">
 
                         <!-- timeline item -->
-                        <div class="timeline-container wow fadeInUp">
+                        <div class="timeline-container wow fadeInUp" v-for="(tobj,index) in timeline"
+                             :data-wow-delay="[loading*index + 's']">
                             <div class="content">
-                                <span class="time">2019 - Present</span>
-                                <h3 class="title">大学本科</h3>
-                                <p>目前就读于山东交通学院，计算机科学与技术专业。</p>
-                            </div>
-                            <!-- <svg t="1592627731075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2148" width="20" height="20"><path d="M895.1808 395.3664L521.728 194.8672c-6.0416-3.2768-13.312-3.2768-19.3536 0L128.8192 395.3664c-14.2336 7.68-14.4384 27.9552-0.3072 35.9424L264.192 507.5968v194.4576c0 7.8848 4.608 15.1552 11.6736 18.5344l230.1952 109.056c5.632 2.6624 12.0832 2.6624 17.7152-0.1024l224.4608-108.8512c7.0656-3.3792 11.5712-10.5472 11.5712-18.432V507.5968l73.9328-41.5744v310.6816c0 11.264 9.216 20.48 20.48 20.48s20.48-9.216 20.48-20.48V442.9824l20.7872-11.6736c14.1312-7.9872 13.9264-28.2624-0.3072-35.9424zM718.848 686.1824L514.8672 790.3232 305.152 685.9776V530.6368l196.8128 110.592c6.2464 3.4816 13.824 3.4816 20.0704 0l196.8128-110.592v155.5456z m-206.848-86.3232L181.0432 413.7984 512 236.1344l330.9568 177.664L512 599.8592z" p-id="2149" fill="#d81e06"></path></svg> -->
-                        </div>
-
-                        <!-- timeline item -->
-                        <div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="content">
-                                <span class="time">2019 - 2016</span>
-                                <h3 class="title">大学专科</h3>
-                                <p>就读于山东电子职业技术学院，软件技术专业。曾获得第十五届山东省大学生软件设计大赛二等奖。</p>
+                                <span class="time">{{tobj.time}}</span>
+                                <h3 class="title">{{tobj.title}}</h3>
+                                <p>{{tobj.text}}</p>
                             </div>
                         </div>
 
-                        <!-- timeline item -->
-                        <div class="timeline-container wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="content">
-                                <span class="time">2004 - 2016</span>
-                                <h3 class="title">义务教育</h3>
-                                <p>文明礼貌、敬老爱幼、
-                                    保护环境、讲究卫生、
-                                    遵纪守法、勤恳敬业、
-                                    助人为乐、见义勇为、
-                                    诚实守信、正直向上。嗯，整挺好！</p>
-                            </div>
-                        </div>
                         <!-- main line -->
                         <span class="line"></span>
                     </div>
@@ -465,7 +379,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- section blog -->
     <section id="blog">
@@ -478,71 +391,24 @@
 
             <div class="row blog-wrapper">
 
-                <div class="col-md-4">
+                <div class="col-md-4" v-for="post in posts">
                     <!-- blog item -->
                     <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
                         <div class="thumb">
-                            <a href="blog/mVqrRKBAz/" target="_blank">
-                                <span class="category">Python</span>
+                            <a :href="post.category_link" target="_blank">
+                                <span class="category">{{post.category}}</span>
                             </a>
-                            <a href="blog/IVwOk1Phb/" target="_blank">
-                                <img src="images/blog/1.svg" alt="blog-title"/>
+                            <a :href="post.link" target="_blank">
+                                <img :src="post.img" alt="blog-title"/>
                             </a>
                         </div>
                         <div class="details">
                             <h4 class="my-0 title">
-                                <a href="blog/IVwOk1Phb/" target="_blank">FigureBed图床系统</a>
+                                <a :href="post.link" target="_blank">{{post.title}}</a>
                             </h4>
                             <ul class="list-inline meta mb-0 mt-2">
-                                <li class="list-inline-item">2020-04-03</li>
-                                <li class="list-inline-item">saowu</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <!-- blog item -->
-                    <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                        <div class="thumb">
-                            <a href="blog/FWHSehn5o/" target="_blank">
-                                <span class="category">Java</span>
-                            </a>
-                            <a href="blog/dnlLkMdxz/" target="_blank">
-                                <img src="images/blog/2.svg" alt="blog-title"/>
-                            </a>
-                        </div>
-                        <div class="details">
-                            <h4 class="my-0 title">
-                                <a href="blog/dnlLkMdxz/" target="_blank">仿制Springboot框架</a>
-                            </h4>
-                            <ul class="list-inline meta mb-0 mt-2">
-                                <li class="list-inline-item">2020-05-09</li>
-                                <li class="list-inline-item">saowu</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <!-- blog item -->
-                    <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
-                        <div class="thumb">
-                            <a href="blog/FWHSehn5o/" target="_blank">
-                                <span class="category">Java</span>
-                            </a>
-                            <a href="blog/dzBUfOA4S/" target="_blank">
-                                <img src="images/blog/3.svg" alt="blog-title"/>
-                            </a>
-                        </div>
-                        <div class="details">
-                            <h4 class="my-0 title">
-                                <a href="blog/dzBUfOA4S/" target="_blank">Dataway接口配置工具</a>
-                            </h4>
-                            <ul class="list-inline meta mb-0 mt-2">
-                                <li class="list-inline-item">2020-06-17</li>
-                                <li class="list-inline-item">saowu</li>
+                                <li class="list-inline-item">{{post.create}}</li>
+                                <li class="list-inline-item">{{creative}}</li>
                             </ul>
                         </div>
                     </div>
@@ -550,14 +416,13 @@
             </div>
             <!-- more button <i class="fas fa-spinner">-->
             <div class="text-center padding-30 ">
-                <a href="blog/" class="btn btn-default" target="_blank">Load more</a>
+                <a :href="blog_link" class="btn btn-default" target="_blank">Load more</a>
             </div>
         </div>
     </section>
 
     <!-- section flink -->
     <section id="flink">
-
         <div class="container">
 
             <!-- section title -->
@@ -567,142 +432,30 @@
 
             <!-- testimonials wrapper -->
             <div class="testimonials-wrapper">
-
-
-                <!-- testimonial item -->
-                <div class="testimonial-item text-center mx-auto">
+                <div class="testimonial-item text-center mx-auto" v-for="item in links">
                     <div class="thumb mb-3 mx-auto">
-                        <img src="https://lafish.fun/images/avatar.png" alt="customer-name"/>
+                        <img :src="item.logo" alt="customer-name"/>
                     </div>
-                    <h4 class="mt-3 mb-0"><a href="https://lafish.fun/" target="_blank">Lafish的部落格</a></h4>
-                    <span class="subtitle">记录某小白的一旬成长</span>
+                    <h4 class="mt-3 mb-0"><a :href="item.link" target="_blank">{{item.name}}</a></h4>
+                    <span class="subtitle">{{item.subtitle}}</span>
                     <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                        <p class="mb-0">在这里记录一下我的大学学习心得，算是一个学习技术生活向的博客。 🔥</p>
-                    </div>
-                </div>
-
-
-                <!-- testimonial item -->
-                <div class="testimonial-item text-center mx-auto">
-                    <div class="thumb mb-3 mx-auto">
-                        <img src="https://cdn.jsdelivr.net/gh/XXXZhy/Blog_Image/images/%E5%A4%B4%E5%83%8F.png"
-                             alt="customer-name"/>
-                    </div>
-                    <h4 class="mt-3 mb-0"><a href="https://www.xxxzhy.com/" target="_blank">XXXZhy</a></h4>
-                    <span class="subtitle">Better late than never</span>
-                    <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                        <p class="mb-0">人生就像一盒巧克力，你永远不知道下一颗是什么味道。 👍</p>
-                    </div>
-                </div>
-
-                <!-- testimonial item -->
-                <div class="testimonial-item text-center mx-auto">
-                    <div class="thumb mb-3 mx-auto">
-                        <img src="https://crj0b.com/img/logo.png" alt="customer-name"/>
-                    </div>
-                    <h4 class="mt-3 mb-0"><a href="https://crj0b.com/" target="_blank">Crj0b's Blog</a></h4>
-                    <span class="subtitle">This is a blog that shares the growth of personal technology learning.</span>
-                    <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                        <p class="mb-0">生活,就是生下来,活下去。 🔥</p>
-                    </div>
-                </div>
-
-
-                <!-- testimonial item -->
-                <div class="testimonial-item text-center mx-auto">
-                    <div class="thumb mb-3 mx-auto">
-                        <img src="https://avatars3.githubusercontent.com/u/39162691?s=460&u=6c6566062b431e54f42f4e9e3392af0ea43b7af8&v=4"
-                             alt="customer-name"/>
-                    </div>
-                    <h4 class="mt-3 mb-0"><a href="https://blog.itjoker.cn/" target="_blank">ITJoker</a></h4>
-                    <span class="subtitle">记录日常？摸鱼代码？随缘弹琴？</span>
-                    <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                        <p class="mb-0">Be brave no matter what your life is like to you. 🔥</p>
-                    </div>
-                </div>
-
-                <!-- testimonial item -->
-                <div class="testimonial-item text-center mx-auto">
-                    <div class="thumb mb-3 mx-auto">
-                        <img src="https://blog.pangao.vip/images/avatar.jpg" alt="customer-name"/>
-                    </div>
-                    <h4 class="mt-3 mb-0"><a href="https://blog.pangao.vip/" target="_blank">潘高的小站</a></h4>
-                    <span class="subtitle">IT套路深，必须瞎折腾</span>
-                    <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                        <p class="mb-0">选择了破解生命密码的专业，奈何对计算机情有独钟。🔥</p>
+                        <p class="mb-0">{{item.subtext}}</p>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-6" v-for="skill in skills">
                     <!-- client item -->
                     <div class="client-item">
                         <div class="inner">
-                            <img src="images/client-1.svg" alt="client-name"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <!-- client item -->
-                    <div class="client-item">
-                        <div class="inner">
-                            <img src="images/client-2.svg" alt="client-name"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <!-- client item -->
-                    <div class="client-item">
-                        <div class="inner">
-                            <img src="images/client-3.svg" alt="client-name"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <!-- client item -->
-                    <div class="client-item">
-                        <div class="inner">
-                            <img src="images/client-4.svg" alt="client-name"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <!-- client item -->
-                    <div class="client-item">
-                        <div class="inner">
-                            <img src="images/client-5.svg" alt="client-name"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <!-- client item -->
-                    <div class="client-item">
-                        <div class="inner">
-                            <img src="images/client-6.svg" alt="client-name"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <!-- client item -->
-                    <div class="client-item">
-                        <div class="inner">
-                            <img src="images/client-7.svg" alt="client-name"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <!-- client item -->
-                    <div class="client-item">
-                        <div class="inner">
-                            <img src="images/client-8.svg" alt="client-name"/>
+                            <img :src="skill" alt="client-name"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- section video -->
     <section id="video">
@@ -741,121 +494,24 @@
             <!-- portolio wrapper -->
             <div class="row portfolio-wrapper" style="position: relative; height: 1551.65px;">
                 <!-- portfolio item -->
-                <div class="col-md-4 col-sm-6 grid-item music" style="position: absolute; left: 0%; top: 517px;">
-                    <a href="https://www.bilibili.com/video/BV1UK411V7TL" class="work-video">
+                <div class="col-md-4 col-sm-6 grid-item music" v-for="(mv,index) in mvs"
+                     style="position: absolute; left: 0%; top: 517px;">
+                    <a :href="mv.link" class="work-video">
                         <div class="portfolio-item bg-white rounded shadow-dark">
                             <div class="details">
-                                <span class="term">MV</span>
-                                <h4 class="title">后来 - 刘若英</h4>
+                                <span class="term">{{mv.type}}</span>
+                                <h4 class="title">{{mv.name}}</h4>
                                 <span class="more-button"><i class="icon-camrecorder"></i></span>
                             </div>
                             <div class="thumb">
-                                <img src="images/works/1.svg" alt="Portfolio-title">
+                                <img :src="['images/works/'+ index + '.svg']" alt="Portfolio-title">
                                 <div class="mask"></div>
                             </div>
-                            <div class="text-center text-dark font-weight-bold padding-30">后来 - 刘若英</div>
+                            <div class="text-center text-dark font-weight-bold padding-30">{{mv.name}}</div>
                         </div>
                     </a>
                 </div>
 
-                <!-- portfolio item -->
-                <div class="col-md-4 col-sm-6 grid-item music" style="position: absolute; left: 0%; top: 517px;">
-                    <a href="https://www.bilibili.com/video/BV1xx411u7Mu"
-                       class="work-video">
-                        <div class="portfolio-item bg-white rounded shadow-dark">
-                            <div class="details">
-                                <span class="term">MV</span>
-                                <h4 class="title">告白气球 - 周杰伦</h4>
-                                <span class="more-button"><i class="icon-camrecorder"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/2.svg" alt="Portfolio-title">
-                                <div class="mask"></div>
-                            </div>
-
-                            <div class="text-center text-dark font-weight-bold padding-30">告白气球 - 周杰伦</div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <!-- portfolio item -->
-                <div class="col-md-4 col-sm-6 grid-item music" style="position: absolute; left: 0%; top: 517px;">
-                    <a href="https://www.bilibili.com/video/BV1hW411A7uw"
-                       class="work-video">
-                        <div class="portfolio-item bg-white rounded shadow-dark">
-                            <div class="details">
-                                <span class="term">MV</span>
-                                <h4 class="title">My Love - 李承哲</h4>
-                                <span class="more-button"><i class="icon-camrecorder"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/3.svg" alt="Portfolio-title">
-                                <div class="mask"></div>
-                            </div>
-                            <div class="text-center text-dark font-weight-bold padding-30">My Love - 李承哲</div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <!-- portfolio item -->
-                <div class="col-md-4 col-sm-6 grid-item music" style="position: absolute; left: 0%; top: 517px;">
-                    <a href="https://www.bilibili.com/video/BV1ut411S7PY"
-                       class="work-video">
-                        <div class="portfolio-item bg-white rounded shadow-dark">
-                            <div class="details">
-                                <span class="term">MV</span>
-                                <h4 class="title">国王和乞丐 - 华晨宇/杨宗纬</h4>
-                                <span class="more-button"><i class="icon-camrecorder"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/4.svg" alt="Portfolio-title">
-                                <div class="mask"></div>
-                            </div>
-                            <div class="text-center text-dark font-weight-bold padding-30">国王和乞丐 - 华/杨</div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <!-- portfolio item -->
-                <div class="col-md-4 col-sm-6 grid-item music" style="position: absolute; left: 0%; top: 517px;">
-                    <a href="https://www.bilibili.com/video/BV16x411a7hj"
-                       class="work-video">
-                        <div class="portfolio-item bg-white rounded shadow-dark">
-                            <div class="details">
-                                <span class="term">MV</span>
-                                <h4 class="title">你就不要想起我 - 张杰</h4>
-                                <span class="more-button"><i class="icon-camrecorder"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/5.svg" alt="Portfolio-title">
-                                <div class="mask"></div>
-                            </div>
-                            <div class="text-center text-dark font-weight-bold padding-30">你就不要想起我 - 张杰</div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- portfolio item -->
-                <div class="col-md-4 col-sm-6 grid-item music" style="position: absolute; left: 0%; top: 517px;">
-                    <a href="https://www.bilibili.com/video/BV1Xt4y1m7D9"
-                       class="work-video">
-                        <div class="portfolio-item bg-white rounded shadow-dark">
-                            <div class="details">
-                                <span class="term">MV</span>
-                                <h4 class="title">明日へ - MISIA</h4>
-                                <span class="more-button"><i class="icon-camrecorder"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/6.svg" alt="Portfolio-title">
-                                <div class="mask"></div>
-                                <div class="text-center text-dark font-weight-bold padding-30">明日へ - MISIA</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
         <!-- more button -->
@@ -894,6 +550,7 @@
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- SCRIPTS -->
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
 <script src="js/jquery-1.12.3.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
@@ -911,6 +568,5 @@
 <script src="js/parallax.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/custom.js"></script>
-
 </body>
 </html>
