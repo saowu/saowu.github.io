@@ -296,7 +296,6 @@
 
     <!-- section services -->
     <section id="services">
-
         <div class="container">
 
             <!-- section title -->
@@ -346,9 +345,9 @@
                         <div class="timeline-container wow fadeInUp" v-for="(tobj,index) in timeline"
                              :data-wow-delay="[loading*index + 's']">
                             <div class="content">
-                                <span class="time">{{tobj.time}}</span>
-                                <h3 class="title">{{tobj.title}}</h3>
-                                <p>{{tobj.text}}</p>
+                                <span class="time" v-text="tobj.time"></span>
+                                <h3 class="title" v-text="tobj.title"></h3>
+                                <p v-html="tobj.text"></p>
                             </div>
                         </div>
 
