@@ -198,6 +198,13 @@ let flink = new Vue({
         ],
         links: [
             {
+                logo: 'images/avatar-3.svg',
+                link: 'http://alex.hardcreate.cn/blog/index/',
+                name: 'ALEX',
+                subtitle: '欢迎阁下访问我的博客',
+                subtext: '有相同的兴趣的朋友可以联系我一起探讨，对于其中有任何问题请与我联系。'
+            },
+            {
                 logo: 'https://lafish.fun/images/avatar.png',
                 link: 'https://lafish.fun/',
                 name: 'Lafish的部落格',
