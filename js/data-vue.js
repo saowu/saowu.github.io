@@ -1,49 +1,7 @@
-$(function () {
-    "use strict";
-
-    // init the validator
-    // validator files are included in the download package
-    // otherwise download from http://1000hz.github.io/bootstrap-validator
-
-    $('#contact-form').validator();
-
-
-    // when the form is submitted
-    $('#contact-form').on('submit', function (e) {
-
-        // if the validator does not prevent form submit
-        if (!e.isDefaultPrevented()) {
-            var url = "form/contact.php";
-
-            // POST values in the background the the script URL
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data) {
-                    // data = JSON object that contact.php returns
-
-                    // we recieve the type of the message: success x danger and apply it to the 
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
-
-                    // let's compose Bootstrap alert box HTML
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-
-                    // If we have messageAlert and messageText
-                    if (messageAlert && messageText) {
-                        // inject the alert to .messages div in our form
-                        $('#contact-form').find('.messages').html(alertBox);
-                        // empty the form
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
-        }
-    })
-});
-
+/**
+ * 数据绑定
+ * @type {Vue}
+ */
 
 let home = new Vue({
     el: '#home',
@@ -122,6 +80,36 @@ let blog = new Vue({
 });
 
 
+let services = new Vue({
+    el: '#services',
+    data: {
+        services: [
+            {
+                title: 'Java Development',
+                text: '能熟练使用Java，了解JVM原理。并熟练使用Spring、Mybatis、SpringBoot、Netty等常用框架。',
+                img: 'images/service-java.svg',
+                color: '#6C6CE5',
+                css: 'text-light shadow-blue',
+            },
+            {
+                title: 'Front-end Development',
+                text: '能熟练使用Photoshop、Bootstrap、jQuery、Vue独立完成普遍的前端开发。',
+                img: 'images/service-2.svg',
+                color: '#F9D74C',
+                css: 'shadow-yellow',
+            },
+            {
+                title: 'Python development',
+                text: '能熟练掌握Python，完成一些简单的爬虫脚本，以及利用Flask、Django搭建后台服务等。',
+                img: 'images/service-python.svg',
+                color: '#F97B8B',
+                css: 'text-light shadow-pink',
+            },
+        ]
+    }
+});
+
+
 let video = new Vue({
     el: '#video',
     data: {
@@ -173,7 +161,7 @@ let flink = new Vue({
                 subtext: '生活,就是生下来,活下去。 '
             },
             {
-                logo: 'https://avatars3.githubusercontent.com/u/39162691?s=460&u=6c6566062b431e54f42f4e9e3392af0ea43b7af8&v=4',
+                logo: 'images/avatar-3.svg',
                 link: 'https://blog.itjoker.cn/',
                 name: 'ITJoker',
                 subtitle: '记录日常？摸鱼代码？随缘弹琴？',
