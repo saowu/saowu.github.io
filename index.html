@@ -452,7 +452,7 @@
                 style="visibility: visible; animation-name: fadeInUp;">
                 <li class="current list-inline-item" data-filter="*">全部</li>
                 <li class="list-inline-item" data-filter=".music">音乐</li>
-                <li class="list-inline-item" data-filter=".kichiku">鬼畜</li>
+                <li class="list-inline-item" data-filter=".knowledge">知识</li>
                 <li class="list-inline-item" data-filter=".game">赛事</li>
                 <li class="list-inline-item" data-filter=".other">其他</li>
             </ul>
@@ -463,7 +463,7 @@
                     <select class="portfolio-filter-mobile">
                         <option value="*">全部</option>
                         <option value=".music">音乐</option>
-                        <option value=".kichiku">鬼畜</option>
+                        <option value=".knowledge">知识</option>
                         <option value=".game">赛事</option>
                         <option value=".other">其他</option>
                     </select>
@@ -474,31 +474,30 @@
             <!-- portolio wrapper -->
             <div class="row portfolio-wrapper" style="position: relative; height: 1551.65px;">
                 <!-- portfolio item -->
-                <div class="col-md-4 col-sm-6 grid-item music" v-for="(mv,index) in mvs"
-                     style="position: absolute; left: 0%; top: 517px;">
-                    <a :href="mv.link" class="work-video">
+                <div class="col-md-4 col-sm-6 grid-item " :class="video.type"
+                     v-for="video in videos.slice(0, size)" style="position: absolute; left: 0%; top: 517px;">
+                    <a :href="video.link" class="work-video">
                         <div class="portfolio-item bg-white rounded shadow-dark">
                             <div class="details">
-                                <span class="term">{{mv.type}}</span>
-                                <h4 class="title">{{mv.name}}</h4>
+                                <span class="term">{{video.type}}</span>
+                                <h4 class="title">{{video.name}}</h4>
                                 <span class="more-button"><i class="icon-camrecorder"></i></span>
                             </div>
                             <div class="thumb">
-                                <img :src="['images/works/'+ index + '.svg']" alt="Portfolio-title">
+                                <img :src="video.img" alt="Portfolio-title">
                                 <div class="mask"></div>
                             </div>
-                            <div class="text-center text-dark font-weight-bold padding-30">{{mv.name}}</div>
+                            <div class="text-center text-dark font-weight-bold padding-30">{{video.name}}</div>
                         </div>
                     </a>
                 </div>
-
             </div>
         </div>
+
         <!-- more button -->
-        <div class="text-center padding-30">
-            <a href="https://music.163.com/#/playlist?id=528418951&userid=373355313" class="btn btn-default"
-               target="_blank">
-                <i class="fas fa-spinner"></i> Load more</a>
+        <div class="text-center mt-4">
+            <a href="https://www.baidu.com/" target="_blank" class="btn btn-default"><i class="fas fa-spinner"></i> Load
+                more</a>
         </div>
     </section>
 

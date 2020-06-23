@@ -113,14 +113,68 @@ let services = new Vue({
 let video = new Vue({
     el: '#video',
     data: {
-        mvs: [
-            {'type': 'mv', 'name': '后来 - 刘若英', link: 'https://www.bilibili.com/video/BV1UK411V7TL'},
-            {'type': 'mv', 'name': '告白气球 - 周杰伦', link: 'https://www.bilibili.com/video/BV1xx411u7Mu'},
-            {'type': 'mv', 'name': 'My Love - 李承哲', link: 'https://www.bilibili.com/video/BV1hW411A7uw'},
-            {'type': 'mv', 'name': '国王和乞丐 - 华晨宇/杨宗纬', link: 'https://www.bilibili.com/video/BV1ut411S7PY'},
-            {'type': 'mv', 'name': '你就不要想起我 - 张杰', link: 'https://www.bilibili.com/video/BV16x411a7hj'},
-            {'type': 'mv', 'name': '明日へ - MISIA', link: 'https://www.bilibili.com/video/BV1Xt4y1m7D9'}
+        size: 6,
+        videos: [
+            {
+                'type': 'knowledge',
+                'name': '最新Vue教程',
+                link: 'https://www.bilibili.com/video/BV15741177Eh',
+                img: 'images/works/knowledge.svg'
+            },
+            {
+                'type': 'game',
+                'name': '英雄联盟季中杯-FPXvsTES',
+                link: 'https://www.bilibili.com/video/BV1ik4y167vJ',
+                img: 'images/works/lol.svg'
+            },
+            {
+                'type': 'other',
+                'name': 'WWDC2020-Apple',
+                link: 'https://www.bilibili.com/video/BV1Sz411i7Za',
+                img: 'images/works/apple.svg'
+            },
+            {
+                'type': 'music',
+                'name': '后来 - 刘若英',
+                link: 'https://www.bilibili.com/video/BV1UK411V7TL',
+                img: 'images/works/music.svg'
+            },
+            {
+                'type': 'other',
+                'name': '《后浪》- bilibili',
+                link: 'https://www.bilibili.com/video/BV1FV411d7u7',
+                img: 'images/works/bilibili.svg'
+            },
+            {
+                'type': 'music',
+                'name': 'My Love - 李承哲',
+                link: 'https://www.bilibili.com/video/BV1hW411A7uw',
+                img: 'images/works/music.svg'
+            },
+            {
+                'type': 'music',
+                'name': '国王和乞丐 - 华晨宇/杨宗纬',
+                link: 'https://www.bilibili.com/video/BV1ut411S7PY',
+                img: 'images/works/music.svg'
+            },
+            {
+                'type': 'music',
+                'name': '你就不要想起我 - 张杰',
+                link: 'https://www.bilibili.com/video/BV16x411a7hj',
+                img: 'images/works/music.svg'
+            },
+            {
+                'type': 'music',
+                'name': '明日へ - MISIA',
+                link: 'https://www.bilibili.com/video/BV1Xt4y1m7D9',
+                img: 'images/works/music.svg'
+            },
         ]
+    },
+    methods: {
+        getTopList: function (num) {
+            this.items = this.videos.slice(0, num);
+        }
     }
 });
 
