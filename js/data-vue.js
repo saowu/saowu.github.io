@@ -222,8 +222,8 @@ let flink = new Vue({
                 logo: 'https://crj0b.com/img/logo.png',
                 link: 'https://crj0b.com/',
                 name: 'Crj0b\'s Blog',
-                subtitle: 'This is a blog that shares the growth of personal technology learning.',
-                subtext: '生活,就是生下来,活下去。 '
+                subtitle: '生活,就是生下来,活下去。 ',
+                subtext: 'This is a blog that shares the growth of personal technology learning.',
             },
             {
                 logo: 'images/avatar-3.svg',
