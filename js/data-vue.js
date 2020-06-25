@@ -33,21 +33,36 @@ let about = new Vue({
         ],
     }
 });
+
 let experience = new Vue({
     el: '#experience',
     data: {
-        timeline: [
+        edu: [
+            {time: '2019 - Present', title: '大学本科', text: '目前就读于山东交通学院，计算机科学与技术专业。继续学习...'},
+            {time: '2019 - 2016', title: '大学专科', text: '就读于山东电子职业技术学院，软件技术专业。曾获得第十五届山东省大学生软件设计大赛二等奖。'},
+            {time: '2004 - 2016', title: '义务教育', text: '文明礼貌、敬老爱幼、保护环境、讲究卫生、遵纪守法、勤恳敬业、助人为乐、见义勇为、诚实守信、正直向上。'},
+        ],
+        exp: [
             {
                 time: '2019 - Present',
-                title: '大学本科',
-                text: '目前就读于<a href="http://www.sdjtu.edu.cn/" target="_blank">山东交通学院</a>，计算机科学与技术专业。'
+                title: 'Java Developer',
+                text: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.'
             },
-            {time: '2019 - 2016', title: '大学专科', text: '就读于山东电子职业技术学院，软件技术专业。曾获得第十五届山东省大学生软件设计大赛二等奖。'},
-            {time: '2004 - 2016', title: '义务教育', text: '文明礼貌、敬老爱幼、保护环境、讲究卫生、遵纪守法、勤恳敬业、助人为乐、见义勇为、诚实守信、正直向上。嗯，整挺好！'},
+            {
+                time: '2017 - 2018',
+                title: 'Python Developer',
+                text: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.'
+            },
+            {
+                time: '2016 - 2017',
+                title: 'Front-End Developer',
+                text: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.'
+            },
         ],
         loading: 0.2,
     }
 });
+
 let blog = new Vue({
     el: '#blog',
     data: {
@@ -83,7 +98,6 @@ let blog = new Vue({
     }
 });
 
-
 let services = new Vue({
     el: '#services',
     data: {
@@ -112,7 +126,6 @@ let services = new Vue({
         ]
     }
 });
-
 
 let video = new Vue({
     el: '#video',
@@ -181,7 +194,6 @@ let video = new Vue({
         }
     }
 });
-
 
 let flink = new Vue({
     el: '#flink',
