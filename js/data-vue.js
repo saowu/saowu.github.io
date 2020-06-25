@@ -134,8 +134,8 @@ let video = new Vue({
         videos: [
             {
                 'type': 'knowledge',
-                'name': '最新Vue教程',
-                link: 'https://www.bilibili.com/video/BV15741177Eh',
+                'name': '拉线式手榴弹的原理解释',
+                link: 'https://www.bilibili.com/video/BV1FV411k7n4',
                 img: 'images/works/knowledge.svg'
             },
             {
