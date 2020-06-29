@@ -216,13 +216,13 @@ let flink = new Vue({
                 subtitle: '欢迎阁下访问我的博客',
                 subtext: '有相同的兴趣的朋友可以联系我一起探讨，对于其中有任何问题请与我联系。'
             },
-            {
-                logo: 'https://lafish.fun/images/avatar.png',
-                link: 'https://lafish.fun/',
-                name: 'Lafish的部落格',
-                subtitle: '记录某小白的一旬成长',
-                subtext: '在这里记录一下我的大学学习心得，算是一个学习技术生活向的博客。 '
-            },
+            // {
+            //     logo: 'https://lafish.fun/images/avatar.png',
+            //     link: 'https://lafish.fun/',
+            //     name: 'Lafish的部落格',
+            //     subtitle: '记录某小白的一旬成长',
+            //     subtext: '在这里记录一下我的大学学习心得，算是一个学习技术生活向的博客。 '
+            // },
             {
                 logo: 'https://cdn.jsdelivr.net/gh/XXXZhy/Blog_Image/images/%E5%A4%B4%E5%83%8F.png',
                 link: 'https://www.xxxzhy.com/',
