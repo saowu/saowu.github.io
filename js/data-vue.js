@@ -210,47 +210,52 @@ let flink = new Vue({
         ],
         links: [
             {
-                logo: 'images/avatar-3.svg',
+                avatar: 'images/avatar-3.svg',
                 link: 'http://alex.hardcreate.cn/blog/index/',
-                name: 'ALEX',
+                name: 'ALEX\'s Blog',
                 subtitle: '欢迎阁下访问我的博客',
                 subtext: '有相同的兴趣的朋友可以联系我一起探讨，对于其中有任何问题请与我联系。'
             },
-            // {
-            //     logo: 'https://lafish.fun/images/avatar.png',
-            //     link: 'https://lafish.fun/',
-            //     name: 'Lafish的部落格',
-            //     subtitle: '记录某小白的一旬成长',
-            //     subtext: '在这里记录一下我的大学学习心得，算是一个学习技术生活向的博客。 '
-            // },
             {
-                logo: 'https://cdn.jsdelivr.net/gh/XXXZhy/Blog_Image/images/%E5%A4%B4%E5%83%8F.png',
+                avatar: 'https://lafish.fun/images/avatar.png',
+                link: 'https://lafish.fun/',
+                name: 'Lafish的部落格',
+                subtitle: '记录某小白的一旬成长',
+                subtext: '在这里记录一下我的大学学习心得，算是一个学习技术生活向的博客。 '
+            },
+            {
+                avatar: 'https://cdn.jsdelivr.net/gh/XXXZhy/Blog_Image/images/%E5%A4%B4%E5%83%8F.png',
                 link: 'https://www.xxxzhy.com/',
                 name: 'XXXZhy',
                 subtitle: 'Better late than never.',
                 subtext: '人生就像一盒巧克力，你永远不知道下一颗是什么味道。'
             },
             {
-                logo: 'https://crj0b.com/img/logo.png',
+                avatar: 'https://crj0b.com/img/logo.png',
                 link: 'https://crj0b.com/',
                 name: 'Crj0b\'s Blog',
                 subtitle: '生活,就是生下来,活下去。 ',
                 subtext: 'This is a blog that shares the growth of personal technology learning.',
             },
             {
-                logo: 'images/avatar-3.svg',
+                avatar: 'images/avatar-3.svg',
                 link: 'https://blog.itjoker.cn/',
                 name: 'ITJoker',
                 subtitle: '记录日常？摸鱼代码？随缘弹琴？',
                 subtext: 'Be brave no matter what your life is like to you. '
             },
             {
-                logo: 'https://blog.pangao.vip/images/avatar.jpg',
+                avatar: 'https://blog.pangao.vip/images/avatar.jpg',
                 link: 'https://blog.pangao.vip/',
                 name: '潘高的小站',
                 subtitle: 'IT套路深，必须瞎折腾',
                 subtext: '选择了破解生命密码的专业，奈何对计算机情有独钟。'
             },
         ]
+    },
+    computed: {
+        defaultAvatar() {
+            return "this.src='images/avatar-3.svg'";
+        }
     }
 });

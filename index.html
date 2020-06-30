@@ -432,7 +432,7 @@
             <div class="testimonials-wrapper">
                 <div class="testimonial-item text-center mx-auto" v-for="item in links">
                     <div class="thumb mb-3 mx-auto">
-                        <img :src="item.logo" alt="customer-name"/>
+                        <img :src="item.avatar ? item.avatar : ''" :onerror="defaultAvatar" alt="avatar"/>
                     </div>
                     <h4 class="mt-3 mb-0"><a :href="item.link" target="_blank">{{item.name}}</a></h4>
                     <span class="subtitle">{{item.subtitle}}</span>
