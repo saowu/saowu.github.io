@@ -3,6 +3,79 @@
  * @type {Vue}
  */
 
+
+
+
+let preloader = new Vue({
+    el: '#preloader',
+    data: {
+        isDark: false,
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
+});
+
+let header = new Vue({
+    el: '.desktop-header-2',
+    data: {
+        isDark: false,
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
+});
+
 let home = new Vue({
     el: '#home',
     data: {
@@ -11,8 +84,37 @@ let home = new Vue({
         wechart: "images/wxqrcode.png",
         github: "https://github.com/saowu",
         blog: "blog/",
-        mail: 'saowu.gan@qq.com'
-    }
+        mail: 'saowu.gan@qq.com',
+        isDark: false,
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
 });
 
 let about = new Vue({
@@ -31,7 +133,36 @@ let about = new Vue({
             {key: 'Music', val: 4027, icon: 'icon-music-tone-alt'},
             {key: 'Articles', val: 31, icon: 'icon-book-open'},
         ],
-    }
+        isDark: false,
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
 });
 
 let experience = new Vue({
@@ -60,7 +191,36 @@ let experience = new Vue({
             },
         ],
         loading: 0.2,
-    }
+        isDark: false,
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
 });
 
 let blog = new Vue({
@@ -94,8 +254,37 @@ let blog = new Vue({
 
         ],
         creative: 'saowu',
-        blog_link: 'blog/'
-    }
+        blog_link: 'blog/',
+        isDark: false,
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
 });
 
 let services = new Vue({
@@ -114,7 +303,7 @@ let services = new Vue({
                 text: '能熟练使用Photoshop、Bootstrap、jQuery、Vue独立完成普遍的前端开发。',
                 img: 'images/service-2.svg',
                 color: '#F9D74C',
-                css: 'shadow-yellow',
+                css: 'text-dark shadow-yellow',
             },
             {
                 title: 'Python development',
@@ -123,13 +312,44 @@ let services = new Vue({
                 color: '#F97B8B',
                 css: 'text-light shadow-pink',
             },
-        ]
-    }
+        ],
+        isDark: false,
+    },
+    mounted: function () {
+
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
 });
 
 let video = new Vue({
     el: '#video',
     data: {
+        isDark: false,
         size: 6,
         videos: [
             {
@@ -192,12 +412,41 @@ let video = new Vue({
         getTopList: function (num) {
             this.items = this.videos.slice(0, num);
         }
-    }
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
 });
 
 let flink = new Vue({
     el: '#flink',
     data: {
+        isDark: false,
         skills: [
             'images/client-1.svg',
             'images/client-2.svg',
@@ -257,5 +506,34 @@ let flink = new Vue({
         defaultAvatar() {
             return "this.src='images/avatar-3.svg'";
         }
-    }
+    },
+    mounted: function () {
+        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
+        this.isDark = media_dark.matches;
+        let callback_dark = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = true;
+            }
+        };
+        if (typeof media_dark.addEventListener === 'function') {
+            media_dark.addEventListener('change', callback_dark);
+        } else if (typeof media_dark.addListener === 'function') {
+            media_dark.addListener(callback_dark);
+        }
+
+        let media_light = window.matchMedia('(prefers-color-scheme: light)');
+        let callback_light = (e) => {
+            let prefersDarkMode = e.matches;
+            if (prefersDarkMode) {
+                this.isDark = false;
+            }
+        };
+        if (typeof media_light.addEventListener === 'function') {
+            media_light.addEventListener('change', callback_light);
+        } else if (typeof media_light.addListener === 'function') {
+            media_light.addListener(callback_light);
+        }
+    },
 });
+

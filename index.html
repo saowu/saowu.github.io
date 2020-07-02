@@ -27,7 +27,7 @@
 <body>
 
 <!-- Preloader -->
-<div id="preloader" class="light">
+<div id="preloader" :class="isDark?'dark':'light'">
     <div class="outer">
         <!-- Google Chrome -->
         <div class="infinityChrome">
@@ -74,7 +74,7 @@
 </header>
 
 <!-- desktop header -->
-<header class="desktop-header-2 light d-flex align-items-start flex-column">
+<header class="desktop-header-2 d-flex align-items-start flex-column" :class="isDark?'':'light'">
 
     <!-- main menu -->
     <nav>
@@ -102,7 +102,7 @@
 <main class="content-2">
 
     <!-- section home -->
-    <section id="home" class="home light d-flex align-items-center">
+    <section id="home" class="home d-flex align-items-center" :class="isDark?'':'light'">
         <div class="container">
 
             <!-- intro -->
@@ -148,7 +148,7 @@
             </div>
 
             <!-- scroll down mouse wheel -->
-            <div class="scroll-down light">
+            <div class="scroll-down" :class="isDark?'':'light'">
                 <a href="#about" class="mouse-wrapper">
                     <span>Scroll Down</span>
                     <span class="mouse">
@@ -244,7 +244,7 @@
                 </div>
 
                 <div class="col-md-9 triangle-left-md triangle-top-sm">
-                    <div class="rounded bg-white shadow-dark padding-30">
+                    <div class="rounded  shadow-dark padding-30" :class="isDark?'bg-dark':'bg-white'">
                         <div class="row">
                             <div class="col-md-6">
                                 <!-- about text -->
@@ -258,7 +258,8 @@
                                 <!-- skill item -->
                                 <div class="skill-item" v-for="skill in skills">
                                     <div class="skill-info clearfix">
-                                        <h4 class="float-left mb-3 mt-0">{{skill.key}}</h4>
+                                        <h4 class="float-left mb-3 mt-0">
+                                            {{skill.key}}</h4>
                                         <span class="float-right">{{skill.val+'%'}}</span>
                                     </div>
                                     <div class="progress">
@@ -285,7 +286,8 @@
                     <div class="fact-item">
                         <span class="icon" :class="stat.icon"></span>
                         <div class="details">
-                            <h3 class="mb-0 mt-0 number"><em class="count">{{stat.val}}</em></h3>
+                            <h3 class="mb-0 mt-0 number"><em
+                                    class="count">{{stat.val}}</em></h3>
                             <p class="mb-0">{{stat.key}}</p>
                         </div>
                     </div>
@@ -311,7 +313,7 @@
                     <div class="service-box rounded data-background padding-30 text-center" :class="service.css"
                          :data-color="service.color">
                         <img :src="service.img" alt="design"/>
-                        <h3 class="mb-3 mt-0" v-text="service.title"></h3>
+                        <h3 :class="service.css" class="mb-3 mt-0" v-text="service.title"></h3>
                         <p class="mb-0" v-text="service.text"></p>
                     </div>
                     <div class="spacer d-md-none d-lg-none" data-height="30"></div>
@@ -339,7 +341,8 @@
                 <div class="col-md-12">
 
                     <!-- timeline wrapper -->
-                    <div class="timeline edu bg-white rounded shadow-dark padding-30 overflow-hidden">
+                    <div class="timeline edu rounded shadow-dark padding-30 overflow-hidden"
+                         :class="isDark?'bg-dark':'bg-white'">
 
                         <!-- timeline item -->
                         <div class="timeline-container wow fadeInUp" v-for="(tobj,index) in edu"
@@ -391,7 +394,7 @@
 
                 <div class="col-md-4" v-for="post in posts">
                     <!-- blog item -->
-                    <div class="blog-item rounded bg-white shadow-dark wow fadeIn">
+                    <div class="blog-item rounded shadow-dark wow fadeIn" :class="isDark?'bg-dark':'bg-white'">
                         <div class="thumb">
                             <a :href="post.category_link" target="_blank">
                                 <span class="category">{{post.category}}</span>
@@ -436,7 +439,8 @@
                     </div>
                     <h4 class="mt-3 mb-0"><a :href="item.link" target="_blank">{{item.name}}</a></h4>
                     <span class="subtitle">{{item.subtitle}}</span>
-                    <div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                    <div class="padding-30 shadow-dark rounded triangle-top position-relative mt-4"
+                         :class="isDark?'bg-dark':'bg-white'">
                         <p class="mb-0">{{item.subtext}}🔥</p>
                     </div>
                 </div>
@@ -495,7 +499,7 @@
                 <div class="col-md-4 col-sm-6 grid-item " :class="video.type"
                      v-for="video in videos.slice(0, size)" style="position: absolute; left: 0%; top: 517px;">
                     <a :href="video.link" class="work-video">
-                        <div class="portfolio-item bg-white rounded shadow-dark">
+                        <div class="portfolio-item rounded shadow-dark" :class="isDark?'bg-dark':'bg-white'">
                             <div class="details">
                                 <span class="term">{{video.type}}</span>
                                 <h4 class="title">{{video.name}}</h4>
@@ -505,7 +509,10 @@
                                 <img :src="video.img" alt="Portfolio-title">
                                 <div class="mask"></div>
                             </div>
-                            <div class="text-center text-dark font-weight-bold padding-30">{{video.name}}</div>
+                            <div class="text-center font-weight-bold padding-30"
+                                 :class="isDark?'text-white':'text-dark'">
+                                {{video.name}}
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -542,7 +549,7 @@
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>

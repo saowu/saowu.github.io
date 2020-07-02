@@ -1696,10 +1696,6 @@ body.dark .blog-item .details h4.title a:hover {
     color: #FF4C60;
 }
 
-body.dark .contact-info {
-    background-image: url("../images/map-light.png");
-}
-
 body.dark .white-popup {
     background: #302f4e;
 }
@@ -2663,6 +2659,84 @@ body.dark footer.footer {
 @media only screen and (max-height: 667px) {
     header.desktop-header-2 .footer {
         margin-top: 100px;
+    }
+}
+
+
+/*=================================================================*/
+/*                      saowu
+/*=================================================================*/
+
+
+/* 浅色模式 */
+@media (prefers-color-scheme: light) {
+
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #FFF;
+        background-color: #353353;
+    }
+
+    body .section-title {
+        color: #FFF;
+    }
+
+    body .section-title:before {
+        background: url("../images/dots-bg-light.svg");
+    }
+
+    body .bg-dark {
+        background: #302f4e !important;
+    }
+
+    body h1, body h2, body h3, body h4, body h5, body h6 {
+        color: #FFF;
+    }
+
+    body .triangle-top:before {
+        border-bottom-color: #302f4e;
+    }
+
+    body .timeline.exp .timeline-container::after, .timeline.edu .timeline-container::after {
+        background: #302f4e;
+    }
+
+    body .portfolio-filter li {
+        color: #FFF;
+    }
+
+    body a:hover {
+        color: #FFF;
+    }
+
+    body .portfolio-filter li.current {
+        color: #FF4C60;
+    }
+
+    body .blog-item .details h4.title a {
+        color: #FFF;
+    }
+
+    body .blog-item .details h4.title a:hover {
+        color: #FF4C60;
+    }
+
+    body .white-popup {
+        background: #302f4e;
+    }
+
+    body footer.footer {
+        border-top: solid 1px rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (prefers-color-scheme: dark) {
+    body .triangle-left-md:before {
+        border-right-color: #302f4e;
     }
 }
 
