@@ -494,7 +494,7 @@ let flink = new Vue({
                 subtext: 'Be brave no matter what your life is like to you. '
             },
             {
-                avatar: 'https://blog.pangao.vip/images/avatar.jpg',
+                avatar: 'images/avatar-3.svg',
                 link: 'https://blog.pangao.vip/',
                 name: '潘高的小站',
                 subtitle: 'IT套路深，必须瞎折腾',
