@@ -122,7 +122,7 @@ let about = new Vue({
     data: {
         skills: [
             {key: 'Java', val: 75, color: '#FFD15C'},
-            {key: 'Python', val: 50, color: '#FF4C60'},
+            {key: 'Front-end', val: 50, color: '#FF4C60'},
             {key: 'Linux', val: 40, color: '#6C6CE5'},
         ],
         description: '从2016年到如今的技术积累过程中，不断的入门，又不断的放弃，隔天再忿忿的捡起。在这个光怪陆离的世界中，依旧还是个不起眼的菜鸟，希望以后能保持平常心，继续坚持学习，迎接未来！！！',
@@ -306,9 +306,9 @@ let services = new Vue({
                 css: 'text-dark shadow-yellow',
             },
             {
-                title: 'Python development',
-                text: '能熟练掌握Python，完成一些简单的爬虫脚本，以及利用Flask、Django搭建后台服务等。',
-                img: 'images/service-python.svg',
+                title: 'Linux Deploy',
+                text: '能熟练使用Linux，进行常见的运维操作，以及安装并配置MySQL，JDK，Docker，Jenkins等开发部署工具。',
+                img: 'images/service-linux.svg',
                 color: '#F97B8B',
                 css: 'text-light shadow-pink',
             },
