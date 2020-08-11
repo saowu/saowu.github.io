@@ -372,8 +372,8 @@ let video = new Vue({
             },
             {
                 'type': 'music',
-                'name': '后来 - 刘若英',
-                link: 'https://www.bilibili.com/video/BV1UK411V7TL',
+                'name': '天空之城 - 久石让',
+                link: 'https://www.bilibili.com/video/BV1is411r7BW',
                 img: 'images/works/music.svg'
             },
             {
