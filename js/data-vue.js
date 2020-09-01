@@ -187,7 +187,7 @@ let experience = new Vue({
             {
                 time: '2017.12 - 2018.03',
                 title: '山东洪溯信息科技有限公司 - 软件开发部',
-                text: '负责某电商平台的部分后台开发（springboot & spring data jpa等；负责数控设备物联网APP中间件及部分后台开发，维护接口（netty & websocket）等；'
+                text: '负责某电商平台的部分后台开发（springboot & spring data jpa）；负责数控设备物联网APP中间件及部分后台开发，维护接口（netty & websocket）等；'
             },
         ],
         loading: 0.2,
