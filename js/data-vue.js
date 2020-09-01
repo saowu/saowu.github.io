@@ -175,19 +175,19 @@ let experience = new Vue({
         ],
         exp: [
             {
-                time: '2019 - Present',
-                title: 'Java Developer',
-                text: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.'
+                time: '2020.07 - 2020.8',
+                title: '山东艾瑞达电子有限公司 - 软件定制服务',
+                text: '使用Springboot+Mybatis+Mysql+RXTX技术开发基于RS-485通讯协议的气体检测系统；'
             },
             {
-                time: '2017 - 2018',
-                title: 'Python Developer',
-                text: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.'
+                time: '2019.06 - 2019.07',
+                title: '山东星维九州安全技术有限公司 - 网络与信息安全部',
+                text: '负责互联网设备（主机、安全设备）漏洞扫描；负责（IDS）入侵检测系统的值守与安全日志分析；负责红蓝对抗的应急响应；'
             },
             {
-                time: '2016 - 2017',
-                title: 'Front-End Developer',
-                text: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.'
+                time: '2017.12 - 2018.03',
+                title: '山东洪溯信息科技有限公司 - 软件开发部',
+                text: '负责某电商平台的部分后台开发（springboot & spring data jpa等；负责数控设备物联网APP中间件及部分后台开发，维护接口（netty & websocket）等；'
             },
         ],
         loading: 0.2,
