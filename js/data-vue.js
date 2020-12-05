@@ -4,8 +4,6 @@
  */
 
 
-
-
 let preloader = new Vue({
     el: '#preloader',
     data: {
@@ -359,16 +357,16 @@ let video = new Vue({
                 img: 'images/works/knowledge.svg'
             },
             {
-                'type': 'game',
-                'name': '英雄联盟季中杯-FPXvsTES',
-                link: 'https://www.bilibili.com/video/BV1ik4y167vJ',
-                img: 'images/works/lol.svg'
+                'type': 'other',
+                'name': '最 强 单 身 狗',
+                link: 'https://www.bilibili.com/video/BV1Pi4y1j7tU',
+                img: 'images/works/bilibili.svg'
             },
             {
-                'type': 'other',
-                'name': 'WWDC2020-Apple',
-                link: 'https://www.bilibili.com/video/BV1Sz411i7Za',
-                img: 'images/works/apple.svg'
+                'type': 'music',
+                'name': '《明日方舟》EP',
+                link: 'https://www.bilibili.com/video/BV11z4y1X7V5',
+                img: 'images/works/bilibili.svg'
             },
             {
                 'type': 'music',
