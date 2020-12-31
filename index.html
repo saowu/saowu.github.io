@@ -27,7 +27,7 @@
 <body>
 
 <!-- Preloader -->
-<div id="preloader" :class="isDark?'dark':'light'">
+<div id="preloader" :class="sharedState.isDark?'dark':'light'">
     <div class="outer">
         <!-- Google Chrome -->
         <div class="infinityChrome">
@@ -74,7 +74,7 @@
 </header>
 
 <!-- desktop header -->
-<header class="desktop-header-2 d-flex align-items-start flex-column" :class="isDark?'':'light'">
+<header class="desktop-header-2 d-flex align-items-start flex-column" :class="sharedState.isDark?'':'light'">
     <!-- main menu -->
     <nav>
         <ul class="vertical-menu scrollspy">
@@ -101,7 +101,7 @@
 <main class="content-2">
 
     <!-- section home -->
-    <section id="home" class="home d-flex align-items-center" :class="isDark?'':'light'">
+    <section id="home" class="home d-flex align-items-center" :class="sharedState.isDark?'':'light'">
         <div class="container">
 
             <!-- intro -->
@@ -147,7 +147,7 @@
             </div>
 
             <!-- scroll down mouse wheel -->
-            <div class="scroll-down" :class="isDark?'':'light'">
+            <div class="scroll-down" :class="sharedState.isDark?'':'light'">
                 <a href="#about" class="mouse-wrapper">
                     <span>Scroll Down</span>
                     <span class="mouse">
@@ -243,7 +243,7 @@
                 </div>
 
                 <div class="col-md-9 triangle-left-md triangle-top-sm">
-                    <div class="rounded  shadow-dark padding-30" :class="isDark?'bg-dark':'bg-white'">
+                    <div class="rounded  shadow-dark padding-30" :class="sharedState.isDark?'bg-dark':'bg-white'">
                         <div class="row">
                             <div class="col-md-6">
                                 <!-- about text -->
@@ -339,7 +339,7 @@
                 <div class="col-md-6">
                     <!-- timeline wrapper -->
                     <div class="timeline edu rounded shadow-dark padding-30 overflow-hidden"
-                         :class="isDark?'bg-dark':'bg-white'">
+                         :class="sharedState.isDark?'bg-dark':'bg-white'">
                         <!-- timeline item -->
                         <div class="timeline-container wow fadeInUp" v-for="(tobj,index) in edu"
                              :data-wow-delay="[loading*index + 's']">
@@ -357,7 +357,7 @@
                     <div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
                     <!-- timeline wrapper -->
                     <div class="timeline exp bg-white rounded shadow-dark padding-30 overflow-hidden"
-                         :class="isDark?'bg-dark':'bg-white'">
+                         :class="sharedState.isDark?'bg-dark':'bg-white'">
                         <!-- timeline item -->
                         <div class="timeline-container wow fadeInUp" v-for="(tobj,index) in exp"
                              :data-wow-delay="[loading*index + 's']"
@@ -389,7 +389,8 @@
 
                 <div class="col-md-4" v-for="post in posts">
                     <!-- blog item -->
-                    <div class="blog-item rounded shadow-dark wow fadeIn" :class="isDark?'bg-dark':'bg-white'">
+                    <div class="blog-item rounded shadow-dark wow fadeIn"
+                         :class="sharedState.isDark?'bg-dark':'bg-white'">
                         <div class="thumb">
                             <a :href="post.category_link" target="_blank">
                                 <span class="category">{{post.category}}</span>
@@ -435,7 +436,7 @@
                     <h4 class="mt-3 mb-0"><a :href="item.link" target="_blank">{{item.name}}</a></h4>
                     <span class="subtitle">{{item.subtitle}}</span>
                     <div class="padding-30 shadow-dark rounded triangle-top position-relative mt-4"
-                         :class="isDark?'bg-dark':'bg-white'">
+                         :class="sharedState.isDark?'bg-dark':'bg-white'">
                         <p class="mb-0">{{item.subtext}}🔥</p>
                     </div>
                 </div>
@@ -494,7 +495,8 @@
                 <div class="col-md-4 col-sm-6 grid-item " :class="video.type"
                      v-for="video in videos.slice(0, size)" style="position: absolute; left: 0%; top: 517px;">
                     <a :href="video.link" class="work-video">
-                        <div class="portfolio-item rounded shadow-dark" :class="isDark?'bg-dark':'bg-white'">
+                        <div class="portfolio-item rounded shadow-dark"
+                             :class="sharedState.isDark?'bg-dark':'bg-white'">
                             <div class="details">
                                 <span class="term">{{video.type}}</span>
                                 <h4 class="title">{{video.name}}</h4>
@@ -505,7 +507,7 @@
                                 <div class="mask"></div>
                             </div>
                             <div class="text-center font-weight-bold padding-30"
-                                 :class="isDark?'text-white':'text-dark'">
+                                 :class="sharedState.isDark?'text-white':'text-dark'">
                                 {{video.name}}
                             </div>
                         </div>
