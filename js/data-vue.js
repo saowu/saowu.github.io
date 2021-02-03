@@ -311,3 +311,13 @@ let flink = new Vue({
         }
     }
 });
+
+
+let map = new Vue({
+    el: '#map',
+    data: {
+        // https://lbs.amap.com/console/show/card
+        // 1080*500
+        src: 'https://surl.amap.com/7C52CJ89GQ',
+    }
+});
