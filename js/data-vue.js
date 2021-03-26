@@ -318,6 +318,6 @@ let map = new Vue({
     data: {
         // https://lbs.amap.com/console/show/card
         // 1080*500
-        src: 'https://surl.amap.com/7C52CJ89GQ',
+        src: 'https://surl.amap.com/1I1gGmxU8DH',
     }
 });
