@@ -319,6 +319,7 @@ let map = new Vue({
         // https://lbs.amap.com/console/show/card
         // 1080*500,1080*460(max)高德限制
         // https://www.google.com/maps google分享
+        // http://api.map.baidu.com/lbsapi/createmap/index.html 百度地图
         src: 'https://surl.amap.com/1INOOShZ2vT',
     }
 });
