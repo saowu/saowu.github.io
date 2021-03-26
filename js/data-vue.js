@@ -317,7 +317,8 @@ let map = new Vue({
     el: '#map',
     data: {
         // https://lbs.amap.com/console/show/card
-        // 1080*500
+        // 1080*500,1080*460(max)高德限制
+        // https://www.google.com/maps google分享
         src: 'https://surl.amap.com/1INOOShZ2vT',
     }
 });
