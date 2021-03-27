@@ -283,7 +283,7 @@ let flink = new Vue({
                 subtext: '人生就像一盒巧克力，你永远不知道下一颗是什么味道。'
             },
             {
-                avatar: 'https://crj0b.com/img/logo.png',
+                avatar: 'images/avatar-3.svg',
                 link: 'https://crj0b.com/',
                 name: 'Crj0b\'s Blog',
                 subtitle: '生活,就是生下来,活下去。 ',
