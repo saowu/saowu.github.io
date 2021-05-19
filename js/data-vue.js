@@ -167,7 +167,7 @@ let services = new Vue({
             },
             {
                 title: 'Linux Deploy',
-                text: '能熟练使用Linux，进行常见的运维操作，以及安装并配置MySQL，JDK，Docker，Jenkins等开发部署工具。',
+                text: '能熟练使用Linux，进行常见的Kubernetes运维操作，以及安装并配置Docker，Jenkins等。',
                 img: 'images/service-linux.svg',
                 color: '#F97B8B',
                 css: 'text-light shadow-pink',
