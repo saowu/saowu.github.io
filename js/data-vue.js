@@ -91,7 +91,7 @@ let experience = new Vue({
         ],
         exp: [
             {
-                time: 'Present - 2020.12',
+                time: '2020.12 - Present ',
                 title: '浙江****管理有限公司 - 运维开发',
                 text: '使用Java开发基于Kubernetes的Paas管理平台；日常运维工作；'
             },
@@ -100,11 +100,6 @@ let experience = new Vue({
                 title: '山东***电子有限公司 - 软件定制',
                 text: '使用Springboot+Mybatis+Mysql+RXTX技术开发基于RS-485通讯协议的气体检测系统；'
             },
-            // {
-            //     time: '2019.06 - 2019.09',
-            //     title: '山东****安全技术有限公司 - 网络安全',
-            //     text: '负责互联网设备（主机、安全设备）漏洞扫描，入侵检测系统的值守与安全日志分析，应急响应；'
-            // },
             {
                 time: '2017.12 - 2018.03',
                 title: '山东**信息科技有限公司 - 软件开发',
