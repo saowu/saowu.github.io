@@ -160,7 +160,7 @@ let services = new Vue({
             },
             {
                 title: 'Front-end Development',
-                text: '能熟练使用Photoshop、Bootstrap、jQuery、Vue独立完成普遍的前端开发。',
+                text: '能熟练使用Photoshop、Bootstrap、jQuery、ElementUI、Vue独立完成普遍的前端开发。',
                 img: 'images/service-2.svg',
                 color: '#F9D74C',
                 css: 'text-dark shadow-yellow',
