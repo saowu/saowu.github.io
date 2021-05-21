@@ -93,7 +93,7 @@ let experience = new Vue({
             {
                 time: '2020.12 - Present ',
                 title: '浙江****管理有限公司 - 运维开发',
-                text: '使用Java开发基于Kubernetes的Paas管理平台；日常运维工作；'
+                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；'
             },
             {
                 time: '2020.07 - 2020.9',
