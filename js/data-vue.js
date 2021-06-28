@@ -12,32 +12,21 @@ let preloader = new Vue({
         sharedState: store,
     },
     mounted: function () {
-        let media_dark = window.matchMedia('(prefers-color-scheme: dark)');
-        this.sharedState.isDark = media_dark.matches;
-        let callback_dark = (e) => {
-            let prefersDarkMode = e.matches;
-            if (prefersDarkMode) {
-                this.sharedState.isDark = true;
-            }
-        };
-        if (typeof media_dark.addEventListener === 'function') {
-            media_dark.addEventListener('change', callback_dark);
-        } else if (typeof media_dark.addListener === 'function') {
-            media_dark.addListener(callback_dark);
+        //dark主题初始化
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.querySelector('body').setAttribute('class', 'dark')
+            this.sharedState.isDark = true;
         }
-
-        let media_light = window.matchMedia('(prefers-color-scheme: light)');
-        let callback_light = (e) => {
-            let prefersDarkMode = e.matches;
-            if (prefersDarkMode) {
+        //主题变化监听
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.querySelector('body').setAttribute('class', 'dark')
+                this.sharedState.isDark = true;
+            } else {
+                document.querySelector('body').removeAttribute('class')
                 this.sharedState.isDark = false;
             }
-        };
-        if (typeof media_light.addEventListener === 'function') {
-            media_light.addEventListener('change', callback_light);
-        } else if (typeof media_light.addListener === 'function') {
-            media_light.addListener(callback_light);
-        }
+        });
     },
 });
 
