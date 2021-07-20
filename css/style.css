@@ -3084,9 +3084,9 @@ body.dark .blog-page-section .blog-single {
 }
 
 .skill-img {
-    filter: grayscale(90%);
-    -webkit-filter: grayscale(90%);
-    opacity: .6;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    opacity: .5;
 }
 
 .skill-img:hover {
