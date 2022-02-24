@@ -251,6 +251,13 @@ let flink = new Vue({
         ],
         links: [
             {
+                avatar: 'images/avatar-2.svg',
+                link: 'https://kubernetes.feisky.xyz/',
+                name: 'feisky',
+                subtitle: 'Kubernetes指南',
+                subtext: '在云计算、SDN 网络和容器编排调度等领域具有多年实践经验。'
+            },
+            {
                 avatar: 'images/avatar-3.svg',
                 link: 'http://alex.hardcreate.cn/blog/index/',
                 name: 'ALEX\'s Blog',
