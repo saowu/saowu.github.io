@@ -272,7 +272,7 @@ let flink = new Vue({
                 subtext: '在这里记录一下我的大学学习心得，算是一个学习技术生活向的博客。 '
             },
             {
-                avatar: 'https://cdn.jsdelivr.net/gh/XXXZhy/Blog_Image/images/%E5%A4%B4%E5%83%8F.png',
+                avatar: 'images/avatar-3.svg',
                 link: 'https://www.xxxzhy.com/',
                 name: 'XXXZhy',
                 subtitle: 'Better late than never.',
