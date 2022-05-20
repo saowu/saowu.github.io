@@ -429,7 +429,14 @@ pre {
     transform: translate(-50%, -50%);
 }
 
+@keyframes preloader-light {
+    from {background-color: #353353;}
+    to {background-color: #F9F9FF;}
+}
+
 #preloader.light {
+    animation-name: preloader-light;
+    animation-duration: 1s;
     background: #F9F9FF;
 }
 
