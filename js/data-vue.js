@@ -176,19 +176,19 @@ let video = new Vue({
                 'type': 'knowledge',
                 'name': '拉线式手榴弹的原理解释',
                 link: 'https://www.bilibili.com/video/BV1FV411k7n4',
-                img: 'images/works/knowledge.svg'
+                img: 'images/works/video.svg'
             },
             {
                 'type': 'other',
                 'name': '最 强 单 身 狗',
                 link: 'https://www.bilibili.com/video/BV1Pi4y1j7tU',
-                img: 'images/works/bilibili.svg'
+                img: 'images/works/music.svg'
             },
             {
                 'type': 'music',
                 'name': '《明日方舟》EP',
                 link: 'https://www.bilibili.com/video/BV11z4y1X7V5',
-                img: 'images/works/bilibili.svg'
+                img: 'images/works/music.svg'
             },
             {
                 'type': 'music',
@@ -200,7 +200,7 @@ let video = new Vue({
                 'type': 'other',
                 'name': '《后浪》- bilibili',
                 link: 'https://www.bilibili.com/video/BV1FV411d7u7',
-                img: 'images/works/bilibili.svg'
+                img: 'images/works/video.svg'
             },
             {
                 'type': 'music',
