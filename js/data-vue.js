@@ -74,7 +74,7 @@ let experience = new Vue({
     el: '#experience',
     data: {
         edu: [
-            {time: '2019 - 2021', title: '大学本科', text: '就读于山东交通学院，计算机科学与技术专业，业已结业。'},
+            {time: '2019 - 2021', title: '大学本科', text: '就读于山东交通学院，计算机科学与技术专业，业已毕业。'},
             {time: '2016 - 2019', title: '大学专科', text: '就读于山东电子职业技术学院，软件技术专业。曾获得第十五届山东省大学生软件设计大赛二等奖。'},
             {time: '2004 - 2016', title: '义务教育', text: '文明礼貌、敬老爱幼、保护环境、讲究卫生、遵纪守法、勤恳敬业、助人为乐、见义勇为、诚实守信、正直向上。'},
         ],
@@ -82,7 +82,7 @@ let experience = new Vue({
             {
                 time: '2020.12 - Present ',
                 title: '浙江****管理有限公司 - 运维开发',
-                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；'
+                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；熟悉微服务架构及开发；'
             },
             {
                 time: '2020.07 - 2020.9',
