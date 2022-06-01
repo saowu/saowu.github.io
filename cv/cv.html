@@ -1,819 +1,808 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7;IE=EDGE">
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <link rel="alternate" media="handheld" href="#"/>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/images/favicon.ico">
-    <title>saowu's CV</title>
-    <style>
-        * {
-            outline: none;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-size: 14px;
-            font-family: "Hiragino Sans GB", "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
-            color: #333;
-            word-wrap: break-word;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        article,
-        aside,
-        details,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        main,
-        menu,
-        nav,
-        section,
-        summary {
-            display: block;
-        }
-
-        progress {
-            display: inline-block;
-            vertical-align: baseline;
-        }
-
-        a {
-            color: #555;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #00b38a;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 10px 0;
-            font-weight: normal;
-        }
-
-        p {
-            margin: 0;
-        }
-
-        p + p {
-            margin-top: 10px;
-        }
-
-        img {
-            border: 0;
-            vertical-align: top;
-            display: inline-block;
-        }
-
-        button,
-        input,
-        optgroup,
-        select,
-        textarea {
-            margin: 0;
-            padding: 0;
-            border: 1px solid #ededed;
-            border-radius: 0;
-            font-family: "Hiragino Sans GB", "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
-        }
-
-        textarea {
-            overflow: auto;
-        }
-
-        label,
-        select,
-        button,
-        input[type="button"],
-        input[type="reset"],
-        input[type="submit"],
-        input[type="radio"],
-        input[type="checkbox"],
-        input[type="file"] {
-            cursor: pointer;
-        }
-
-        input[type=text],
-        input[type=password],
-        textarea {
-            font-family: "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        th,
-        td {
-            padding: 0;
-        }
-
-        strong {
-            font-weight: normal;
-        }
-
-        em,
-        i {
-            font-style: normal;
-        }
-
-        dl,
-        dt,
-        dd {
-            margin: 0;
-        }
-
-        ::selection {
-            color: #fff;
-            background-color: #00b38a;
-        }
-
-        ::-moz-selection {
-            color: #fff;
-            background-color: #00b38a;
-        }
-
-        ul,
-        ol {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        #container {
-            width: 720px;
-            margin: 50px auto 54px auto;
-            border: 1px solid #e3ebe9;
-            border-radius: 5px;
-        }
-
-        .mr-template {
-            padding: 50px 50px 10px;
-        }
-
-        .mr-template .mr-template_title {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-
-        .mr-template .mr-template_title span {
-            font-size: 18px;
-            color: #333333;
-            font-weight: 600;
-            position: relative;
-            margin-left: 10px;
-        }
-
-        .mr-template .mr-template_title span:before {
-            content: '';
-            display: block;
-            border-left: 3px solid #00B38A;
-            height: 16px;
-            width: 3px;
-            position: absolute;
-            left: -7px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .mr-template .mr_md_del {
-            display: none;
-        }
-
-        /***** 基本信息 ****/
-
-        .basic {
-            padding: 50px;
-            background: #FAFAFA;
-            border-radius: 5px 5px 0 0;
-            border-bottom: 1px solid #E3EBE9;
-            display: flex;
-        }
-
-        .basic .basic-photo {
-            height: 88px;
-            width: 88px;
-            display: inline-block;
-            position: relative;
-        }
-
-        .basic .basic-photo img {
-            height: 88px;
-            width: 88px;
-            position: absolute;
-            top: 0;
-            border-radius: 50%;
-        }
-
-        .basic .basic-photo .basic-photo_shadow {
-            display: none;
-        }
-
-        .basic .basic-photo:hover .basic-photo_shadow {
-            display: block;
-        }
-
-        .basic .basic-info {
-            position: relative;
-            width: 100%;
-            margin-left: 20px;
-            flex: 1;
-        }
-
-        .basic .basic-info .edit-btn {
-            position: absolute;
-            right: 0;
-            top: 4px;
-        }
-
-        .basic .basic-info .basic-name-area {
-            overflow: hidden;
-            height: 37px;
-            margin-bottom: 11px;
-        }
-
-        .basic .basic-info .basic-name {
-            float: left;
-            max-width: 250px;
-            font-size: 26px;
-            color: #333333;
-            font-weight: 600;
-            line-height: 37px;
-        }
-
-        .basic .basic-info .icon-sex {
-            width: 13px;
-            height: 13px;
-            float: left;
-            margin-top: 16px;
-            margin-left: 10px;
-            background: none;
-        }
-
-        .basic .basic-info .icon-sex.icon-sex__male {
-            background: url(https://www.lgstatic.com/common/image/pc/icon_man.png);
-        }
-
-        .basic .basic-info .icon-sex.icon-sex__female {
-            background: url(https://www.lgstatic.com/common/image/pc/icon_woman.png);
-        }
-
-        .basic .basic-info .basic-self {
-            margin-top: 20px;
-        }
-
-        .basic .basic-info p {
-            font-size: 14px;
-            color: #333333;
-            line-height: 20px;
-            margin-top: 6px;
-        }
-
-        .basic .basic-info i {
-            display: inline-block;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-
-        .basic .basic-info .basic-tel_icon {
-            width: 11px;
-            height: 14px;
-            margin-right: 2px;
-            background: url(https://www.lgstatic.com/common/image/pc/icon_phone.png);
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .basic .basic-info .basic-email_icon {
-            width: 14px;
-            height: 11px;
-            margin-right: 2px;
-            background: url(https://www.lgstatic.com/common/image/pc/icon_mail.png);
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .basic .basic-info .basic-tel {
-            margin-right: 20px;
-        }
-
-        .basic-tel span {
-            vertical-align: middle;
-        }
-
-        .basic-email span {
-            vertical-align: middle;
-        }
-
-        /***** 基本信息 end ****/
-
-        /***** 自我描述 ****/
-
-        .per .per-self_content {
-            position: relative;
-        }
-
-        .per .per-self_content .per-self_des {
-            margin-top: 13px;
-            font-size: 14px;
-            color: #666666;
-            line-height: 30px;
-        }
-
-        .per .per-self_content .per-self_des p {
-            margin-top: 0;
-        }
-
-        .per .per-self_content .per-self_des ol {
-            list-style-type: decimal;
-            -webkit-padding-start: 20px;
-        }
-
-        .per .per-self_content .per-self_des ul {
-            list-style: disc;
-            -webkit-padding-start: 20px;
-        }
-
-        /***** 自我描述 end ****/
-
-        /***** 工作经历 ****/
-
-        .work-exp .work-exp_list {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .work-exp .work-exp_list .exp-list_time {
-            font-size: 14px;
-            color: #666666;
-            position: absolute;
-            right: 0;
-        }
-
-        .work-exp .work-exp_list .exp-list_top {
-            display: flex;
-            align-items: center;
-        }
-
-        .work-exp .work-exp_list .exp-list_top img {
-            width: 46px;
-            height: 46px;
-            margin-right: 10px;
-        }
-
-        .work-exp .work-exp_list .exp-list_top .exp-list_right {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            height: 46px;
-            justify-content: space-between;
-        }
-
-        .work-exp .work-exp_list .exp-list_top .exp-list_right p,
-        .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
-            font-size: 14px;
-            color: #333333;
-        }
-
-        .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
-            font-weight: 600;
-        }
-
-        .work-exp .work-exp_list .tagboard {
-            margin: 20px 0 10px;
-        }
-
-        .work-exp .work-exp_list .exp-list_content {
-            font-size: 14px;
-            color: #666666;
-            line-height: 30px;
-        }
-
-        .tagboard .tagboard-tag {
-            font-size: 12px;
-            color: #999;
-            line-height: 18px;
-            padding: 3px 10px;
-            border: 1px solid #EAEDEC;
-            border-radius: 100px;
-            margin-right: 10px;
-        }
-
-        .work-exp .work-exp_list .exp-list_content ul, .work-exp .work-exp_list .exp-list_content_highlight ul {
-            list-style: disc;
-            -webkit-padding-start: 20px;
-        }
-
-        .work-exp .work-exp_list .exp-list_content ol, .work-exp .work-exp_list .exp-list_content_highlight ol {
-            list-style-type: decimal;
-            -webkit-padding-start: 20px;
-        }
-
-        /***** 工作经历 end ****/
-
-        /***** 项目经历 ****/
-
-        .pro-exp .pro-exp_list {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .pro-exp .pro-exp_list .exp-list_title {
-            font-size: 14px;
-            color: #333333;
-            font-weight: 600;
-            cursor: default;
-            display: flex;
-        }
-
-        .pro-exp .pro-exp_list .exp-list_title .exp-project_name, .pro-exp .pro-exp_list .exp-list_title .exp-project_company span {
-            max-width: 222px;
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .pro-exp .pro-exp_list .exp-list_title .exp-project_company {
-            display: flex;
-        }
-
-        .pro-exp .pro-exp_list .exp-list_time {
-            font-size: 14px;
-            color: #666666;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        .pro-exp .pro-exp_list .exp-list_content,
-        .pro-exp .pro-exp_list .exp-project_des {
-            font-size: 14px;
-            color: #666666;
-            line-height: 30px;
-            margin-top: 10px;
-        }
-
-        .pro-exp .exp-list_title.active:hover {
-            color: #00B38A;
-            cursor: pointer;
-        }
-
-        .pro-exp .exp-project_url {
-            font-size: 14px;
-            color: #666;
-            line-height: 30px;
-        }
-
-        .pro-exp .pro-exp_list .exp-list_content ul, .pro-exp .pro-exp_list .exp-project_des ul {
-            list-style: disc;
-            -webkit-padding-start: 20px;
-        }
-
-        .pro-exp .pro-exp_list .exp-list_content ol, .pro-exp .pro-exp_list .exp-project_des ol {
-            list-style-type: decimal;
-            -webkit-padding-start: 20px
-        }
-
-        /***** 项目经历 end ****/
-
-        /***** 教育经历 ****/
-
-        .edu-exp .edu-exp_list {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .edu-exp .edu-exp_list .exp-list_time {
-            font-size: 14px;
-            color: #666666;
-            position: absolute;
-            right: 0;
-        }
-
-        .edu-exp .edu-exp_list .exp-list_top {
-            display: flex;
-            align-items: center;
-        }
-
-        .edu-exp .edu-exp_list .exp-list_top img {
-            width: 46px;
-            height: 46px;
-            margin-right: 10px;
-        }
-
-        .edu-exp .edu-exp_list .exp-list_top .exp-list_right {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            height: 46px;
-            justify-content: space-between;
-        }
-
-        .edu-exp .edu-exp_list .exp-list_top .exp-list_right p,
-        .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
-            font-size: 14px;
-            color: #333333;
-        }
-
-        .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
-            font-weight: 600;
-        }
-
-
-        /***** 教育经历 end ****/
-
-        /***** 社交主页 ****/
-
-        .social-page .social-page_list {
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .social-page .social-page_list .social-page_content {
-            display: flex;
-        }
-
-        .social-page .social-page_list .social-page_content img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
-
-        .social-page .social-page_list .social-page_content p {
-            font-size: 14px;
-            color: #666666;
-        }
-
-
-        /***** 社交主页 end ****/
-        /***** 图片作品 ****/
-
-        .portfolio-page .portfolio-list {
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .portfolio-page .portfolio-list .portfolio-content {
-            font-size: 14px;
-            color: #666666;
-        }
-
-
-        /***** 图片作品 end ****/
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7;IE=EDGE">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="author" content="saowu">
+  <title>saowu's CV</title>
+  <link rel="alternate" media="handheld" href="#"/>
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/saowu/saowu.github.io@1.0/images/favicon.ico">
+  <style>
+      * {
+          outline: none;
+      }
+
+      body {
+          margin: 0;
+          padding: 0;
+          font-size: 14px;
+          font-family: "Hiragino Sans GB", "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
+          color: #333;
+          word-wrap: break-word;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      main,
+      menu,
+      nav,
+      section,
+      summary {
+          display: block;
+      }
+
+      progress {
+          display: inline-block;
+          vertical-align: baseline;
+      }
+
+      a {
+          color: #555;
+          background-color: transparent;
+          text-decoration: none;
+      }
+
+      a:hover {
+          color: #00b38a;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin: 10px 0;
+          font-weight: normal;
+      }
+
+      p {
+          margin: 0;
+      }
+
+      p + p {
+          margin-top: 10px;
+      }
+
+      img {
+          border: 0;
+          vertical-align: top;
+          display: inline-block;
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+          margin: 0;
+          padding: 0;
+          border: 1px solid #ededed;
+          border-radius: 0;
+          font-family: "Hiragino Sans GB", "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
+      }
+
+      textarea {
+          overflow: auto;
+      }
+
+      label,
+      select,
+      button,
+      input[type="button"],
+      input[type="reset"],
+      input[type="submit"],
+      input[type="radio"],
+      input[type="checkbox"],
+      input[type="file"] {
+          cursor: pointer;
+      }
+
+      input[type=text],
+      input[type=password],
+      textarea {
+          font-family: "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
+      }
+
+      table {
+          border-collapse: collapse;
+          border-spacing: 0;
+      }
+
+      th,
+      td {
+          padding: 0;
+      }
+
+      strong {
+          font-weight: normal;
+      }
+
+      em,
+      i {
+          font-style: normal;
+      }
+
+      dl,
+      dt,
+      dd {
+          margin: 0;
+      }
+
+      ::selection {
+          color: #fff;
+          background-color: #00b38a;
+      }
+
+      ::-moz-selection {
+          color: #fff;
+          background-color: #00b38a;
+      }
+
+      ul,
+      ol {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+
+      #container {
+          width: 720px;
+          margin: 50px auto 54px auto;
+          border: 1px solid #e3ebe9;
+          border-radius: 5px;
+      }
+
+      .mr-template {
+          padding: 50px 50px 10px;
+      }
+
+      .mr-template .mr-template_title {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+      }
+
+      .mr-template .mr-template_title span {
+          font-size: 18px;
+          color: #333333;
+          font-weight: 600;
+          position: relative;
+          margin-left: 10px;
+      }
+
+      .mr-template .mr-template_title span:before {
+          content: '';
+          display: block;
+          border-left: 3px solid #00B38A;
+          height: 16px;
+          width: 3px;
+          position: absolute;
+          left: -7px;
+          top: 50%;
+          transform: translateY(-50%);
+      }
+
+      .mr-template .mr_md_del {
+          display: none;
+      }
+
+      /***** 基本信息 ****/
+
+      .basic {
+          padding: 50px;
+          background: #FAFAFA;
+          border-radius: 5px 5px 0 0;
+          border-bottom: 1px solid #E3EBE9;
+          display: flex;
+      }
+
+      .basic .basic-photo {
+          height: 88px;
+          width: 88px;
+          display: inline-block;
+          position: relative;
+      }
+
+      .basic .basic-photo img {
+          height: 88px;
+          width: 88px;
+          position: absolute;
+          top: 0;
+          border-radius: 50%;
+      }
+
+      .basic .basic-photo .basic-photo_shadow {
+          display: none;
+      }
+
+      .basic .basic-photo:hover .basic-photo_shadow {
+          display: block;
+      }
+
+      .basic .basic-info {
+          position: relative;
+          width: 100%;
+          margin-left: 20px;
+          flex: 1;
+      }
+
+      .basic .basic-info .edit-btn {
+          position: absolute;
+          right: 0;
+          top: 4px;
+      }
+
+      .basic .basic-info .basic-name-area {
+          overflow: hidden;
+          height: 37px;
+          margin-bottom: 11px;
+      }
+
+      .basic .basic-info .basic-name {
+          float: left;
+          max-width: 250px;
+          font-size: 26px;
+          color: #333333;
+          font-weight: 600;
+          line-height: 37px;
+      }
+
+      .basic .basic-info .icon-sex {
+          width: 13px;
+          height: 13px;
+          float: left;
+          margin-top: 16px;
+          margin-left: 10px;
+          background: none;
+      }
+
+      .basic .basic-info .icon-sex.icon-sex__male {
+          background: url(https://www.lgstatic.com/common/image/pc/icon_man.png);
+      }
+
+      .basic .basic-info .icon-sex.icon-sex__female {
+          background: url(https://www.lgstatic.com/common/image/pc/icon_woman.png);
+      }
+
+      .basic .basic-info .basic-self {
+          margin-top: 20px;
+      }
+
+      .basic .basic-info p {
+          font-size: 14px;
+          color: #333333;
+          line-height: 20px;
+          margin-top: 6px;
+      }
+
+      .basic .basic-info i {
+          display: inline-block;
+          margin-right: 5px;
+          vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-tel_icon {
+          width: 11px;
+          height: 14px;
+          margin-right: 2px;
+          background: url(https://www.lgstatic.com/common/image/pc/icon_phone.png);
+          display: inline-block;
+          vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-email_icon {
+          width: 14px;
+          height: 11px;
+          margin-right: 2px;
+          background: url(https://www.lgstatic.com/common/image/pc/icon_mail.png);
+          display: inline-block;
+          vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-tel {
+          margin-right: 20px;
+      }
+
+      .basic-tel span {
+          vertical-align: middle;
+      }
+
+      .basic-email span {
+          vertical-align: middle;
+      }
+
+      /***** 基本信息 end ****/
+
+      /***** 自我描述 ****/
+
+      .per .per-self_content {
+          position: relative;
+      }
+
+      .per .per-self_content .per-self_des {
+          margin-top: 13px;
+          font-size: 14px;
+          color: #666666;
+          line-height: 30px;
+      }
+
+      .per .per-self_content .per-self_des p {
+          margin-top: 0;
+      }
+
+      .per .per-self_content .per-self_des ol {
+          list-style-type: decimal;
+          -webkit-padding-start: 20px;
+      }
+
+      .per .per-self_content .per-self_des ul {
+          list-style: disc;
+          -webkit-padding-start: 20px;
+      }
+
+      /***** 自我描述 end ****/
+
+      /***** 工作经历 ****/
+
+      .work-exp .work-exp_list {
+          position: relative;
+          margin-bottom: 30px;
+      }
+
+      .work-exp .work-exp_list .exp-list_time {
+          font-size: 14px;
+          color: #666666;
+          position: absolute;
+          right: 0;
+      }
+
+      .work-exp .work-exp_list .exp-list_top {
+          display: flex;
+          align-items: center;
+      }
+
+      .work-exp .work-exp_list .exp-list_top img {
+          width: 46px;
+          height: 46px;
+          margin-right: 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          height: 46px;
+          justify-content: space-between;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right p,
+      .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
+          font-size: 14px;
+          color: #333333;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
+          font-weight: 600;
+      }
+
+      .work-exp .work-exp_list .tagboard {
+          margin: 20px 0 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content {
+          font-size: 14px;
+          color: #666666;
+          line-height: 30px;
+      }
+
+      .tagboard .tagboard-tag {
+          font-size: 12px;
+          color: #999;
+          line-height: 18px;
+          padding: 3px 10px;
+          border: 1px solid #EAEDEC;
+          border-radius: 100px;
+          margin-right: 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content ul, .work-exp .work-exp_list .exp-list_content_highlight ul {
+          list-style: disc;
+          -webkit-padding-start: 20px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content ol, .work-exp .work-exp_list .exp-list_content_highlight ol {
+          list-style-type: decimal;
+          -webkit-padding-start: 20px;
+      }
+
+      /***** 工作经历 end ****/
+
+      /***** 项目经历 ****/
+
+      .pro-exp .pro-exp_list {
+          position: relative;
+          margin-bottom: 30px;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title {
+          font-size: 14px;
+          color: #333333;
+          font-weight: 600;
+          cursor: default;
+          display: flex;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_name, .pro-exp .pro-exp_list .exp-list_title .exp-project_company span {
+          max-width: 222px;
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_company {
+          display: flex;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_time {
+          font-size: 14px;
+          color: #666666;
+          position: absolute;
+          right: 0;
+          top: 0;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_content,
+      .pro-exp .pro-exp_list .exp-project_des {
+          font-size: 14px;
+          color: #666666;
+          line-height: 30px;
+          margin-top: 10px;
+      }
+
+      .pro-exp .exp-list_title.active:hover {
+          color: #00B38A;
+          cursor: pointer;
+      }
+
+      .pro-exp .exp-project_url {
+          font-size: 14px;
+          color: #666;
+          line-height: 30px;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_content ul, .pro-exp .pro-exp_list .exp-project_des ul {
+          list-style: disc;
+          -webkit-padding-start: 20px;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_content ol, .pro-exp .pro-exp_list .exp-project_des ol {
+          list-style-type: decimal;
+          -webkit-padding-start: 20px
+      }
+
+      /***** 项目经历 end ****/
+
+      /***** 教育经历 ****/
+
+      .edu-exp .edu-exp_list {
+          position: relative;
+          margin-bottom: 30px;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_time {
+          font-size: 14px;
+          color: #666666;
+          position: absolute;
+          right: 0;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top {
+          display: flex;
+          align-items: center;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top img {
+          width: 46px;
+          height: 46px;
+          margin-right: 10px;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          height: 46px;
+          justify-content: space-between;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right p,
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
+          font-size: 14px;
+          color: #333333;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
+          font-weight: 600;
+      }
+
+
+      /***** 教育经历 end ****/
+
+      /***** 社交主页 ****/
+
+      .social-page .social-page_list {
+          margin-bottom: 30px;
+          position: relative;
+      }
+
+      .social-page .social-page_list .social-page_content {
+          display: flex;
+      }
+
+      .social-page .social-page_list .social-page_content img {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          border-radius: 50%;
+      }
+
+      .social-page .social-page_list .social-page_content p {
+          font-size: 14px;
+          color: #666666;
+      }
+
+
+      /***** 社交主页 end ****/
+      /***** 图片作品 ****/
+
+      .portfolio-page .portfolio-list {
+          margin-bottom: 30px;
+          position: relative;
+      }
+
+      .portfolio-page .portfolio-list .portfolio-content {
+          font-size: 14px;
+          color: #666666;
+      }
+
+
+      /***** 图片作品 end ****/
+  </style>
 </head>
 <body>
 <div id="container">
-    <!-- 基本信息 -->
-    <div class="basic" id="baseInfo">
-        <div class="basic-photo">
-            <img class="mr_headimg user-avatar" id="userpic"
-                 src="../images/avatar-1.svg" width="120"
-                 height="120" alt="头像"
-            />
-        </div>
-        <div class="basic-info">
-            <div class="basic-name-area">
-                <p class="basic-name female">吴延博</p>
-                <i class="icon-sex icon-sex__male"></i>
-            </div>
-            <p class="basic-self">
-                <span class="basic-school">山东交通学院</span>
-
-                <span class="basic-edu"> / 本科  </span>
-
-                <span class="basic-end-year"> / 2021年毕业</span>
-
-                <span class="basic-age">
-                                     / 24岁</span>
-
-            </p>
-            <p>
-                            <span class="basic-tel">
-                                <i class="basic-tel_icon"></i>
-                                <span>132****2341</span>
-                            </span>
-                <span class="basic-email">
-                                <i class="basic-email_icon"></i>
-                                <span>saowu.gan@qq.com</span>
-                            </span>
-            </p>
-        </div>
+  <!-- 基本信息 -->
+  <div class="basic" id="baseInfo">
+    <div class="basic-photo">
+      <img class="mr_headimg user-avatar" id="userpic" src="../images/avatar-1.svg" width="120" height="120" alt="头像"/>
     </div>
-    <!-- /基本信息 -->
-
-    <!-- 自我描述 -->
-    <div class="mr-template per" id="perAbility">
-        <div class="mr-template_title">
-            <span>个人优势</span>
-        </div>
-        <div class="tagboard integrative-tag">
-            <div class="integrative-tag_content">
-                <span class="tagboard-tag">责任心</span>
-                <span class="tagboard-tag">执行力</span>
-                <span class="tagboard-tag">自驱动</span>
-                <span class="tagboard-tag">抗压能力</span>
-                <span class="tagboard-tag">时间管理</span>
-            </div>
-        </div>
-        <div class="per-self_content">
-            <div class="per-self_des">
-                • 本人计算机专业毕业生，有扎实的软件开发基础；
-                <br/>• 对于Java，Spring，docker，k8s能熟练使用;
-                <br/>• 善于分析和吸取经验；
-                <br/>• 对于新技术有充分的热情和信心去学习；
-                <br/>• 曾获得第十五届山东省大学生软件设计大赛二等奖；
-                <br/>• 多次获得学校奖学金和优秀学生称号；
-            </div>
-        </div>
+    <div class="basic-info">
+      <div class="basic-name-area">
+        <p class="basic-name female">吴延博</p>
+        <i class="icon-sex icon-sex__male"></i>
+      </div>
+      <p class="basic-self">
+        <span class="basic-school">山东交通学院</span>
+        <span class="basic-edu"> / 本科  </span>
+        <span class="basic-end-year"> / 2021年毕业</span>
+        <span class="basic-age">/ 24岁</span>
+      </p>
+      <p>
+        <span class="basic-tel">
+            <i class="basic-tel_icon"></i>
+            <span>132****2341</span>
+        </span>
+        <span class="basic-email">
+            <i class="basic-email_icon"></i>
+            <span>saowu.gan@qq.com</span>
+        </span>
+      </p>
     </div>
-    <!-- /自我描述 -->
+  </div>
+  <!-- /基本信息 -->
 
-    <!-- 教育经历 -->
-    <div class="mr-template edu-exp" id="eduExp">
-        <div class="mr-template_title">
-            <span>教育经历</span>
+  <!-- 自我描述 -->
+  <div class="mr-template per" id="perAbility">
+    <div class="mr-template_title">
+      <span>个人优势</span>
+    </div>
+    <div class="tagboard integrative-tag">
+      <div class="integrative-tag_content">
+        <span class="tagboard-tag">责任心</span>
+        <span class="tagboard-tag">执行力</span>
+        <span class="tagboard-tag">自驱动</span>
+        <span class="tagboard-tag">抗压能力</span>
+        <span class="tagboard-tag">时间管理</span>
+      </div>
+    </div>
+    <div class="per-self_content">
+      <div class="per-self_des">
+        • 本人计算机专业毕业生，有扎实的软件开发基础；
+        <br/>• 熟练掌握Java，Spring，docker，k8s，微服务等技术;
+        <br/>• 善于分析和吸取经验，对于新技术有充分的热情和信心去学习；
+        <br/>• 曾获得第十五届山东省大学生软件设计大赛二等奖；
+        <br/>• 多次获得学校奖学金，获得优秀学生和优秀毕业生称号；
+      </div>
+    </div>
+  </div>
+  <!-- /自我描述 -->
+
+  <!-- 教育经历 -->
+  <div class="mr-template edu-exp" id="eduExp">
+    <div class="mr-template_title">
+      <span>教育经历</span>
+    </div>
+    <ol class="edu-exp_group">
+      <li class="edu-exp_list">
+        <p class="exp-list_time">2019.09-2021.06</p>
+        <div class="exp-list_top">
+          <img src="https://www.lgstatic.com/i/image/M00/AD/51/Cgp3O1i1E7-AXm_CAAAJlTE0z0g65.jpeg" alt="学校Logo">
+          <div class="exp-list_right">
+            <strong>山东交通学院</strong>
+            <p>统招专升本 / 计算机科学与技术</p>
+          </div>
         </div>
-        <ol class="edu-exp_group">
-            <li class="edu-exp_list">
-                <p class="exp-list_time">2019.09-2021.06</p>
-                <div class="exp-list_top">
-                    <img src="https://www.lgstatic.com/i/image/M00/AD/51/Cgp3O1i1E7-AXm_CAAAJlTE0z0g65.jpeg"
-                         alt="学校Logo">
-                    <div class="exp-list_right">
-                        <strong>山东交通学院</strong>
-                        <p>统招专升本 / 计算机科学与技术</p>
-                    </div>
-                </div>
+      </li>
+    </ol>
+  </div>
+  <!-- /教育经历 -->
+
+  <!-- 工作经历 -->
+  <div class="mr-template work-exp" id="workExp">
+    <div class="mr-template_title">
+      <span>工作经历</span>
+    </div>
+    <ol class="work-exp_group">
+      <li class="work-exp_list">
+        <p class="exp-list_time">2020.12-至今</p>
+        <div class="exp-list_top">
+          <img src="https://www.lgstatic.com/images/logo_default.png" alt="公司Logo">
+          <div class="exp-list_right">
+            <strong class="exp-list_title">
+              <span>浙江***品牌管理有限公司</span>
+              ／
+              <span>平台和信息安全技术部</span>
+            </strong>
+            <p>Java</p>
+          </div>
+        </div>
+        <div class="tagboard">
+          <span class="tagboard-tag">k8s</span>
+          <span class="tagboard-tag">Java</span>
+          <span class="tagboard-tag">Spring</span>
+          <span class="tagboard-tag">DevOps</span>
+          <span class="tagboard-tag">自动化</span>
+        </div>
+        <div class="exp-list_content">
+          <p>主要工作：开发建设基于Kubernetes的Devops系统，以及日常运维工作。详细内容如下：</p>
+          <ol>
+            <li>DevOps之发布系统初建<br/>
+              <ul>
+                <li>背景：早期应用采用Jenkins进行发布，由于其发布时间较长且配置相对复杂，各种操作和源代码分离，非常影响后期维护和扩展。<br/></li>
+                <li>目的：重建现有发布系统，平台搭建使用Java+Vue技术栈，采用Gitlab+GitlabRunner的方式对K8S集群的应用进行迭代发布，制定发布流程和规范。<br/></li>
+                <li>
+                  收益：支持多分支合并、支持Vue、Java类型应用编译和容器化部署、支持OA审批、自动合并基线、webshell、一键部署探针等初期基本建设。设计了多环境下分支发布区、集成区、非集成区的概念，后来为了让前端基础架构部门也可以写一写业务支持了Node类型应用发布。<br/>
+                </li>
+              </ul>
             </li>
-        </ol>
-    </div>
-    <!-- /教育经历 -->
-
-    <!-- 工作经历 -->
-    <div class="mr-template work-exp" id="workExp">
-        <div class="mr-template_title">
-            <span>工作经历</span>
+            <li>DevOps之多版本发布（灰度版本发布）<br/>
+              <ul>
+                <li>背景：随着用户体系逐渐升级，对于发布新版本所造成的风险开始重视起来。<br/></li>
+                <li>目标：升级发布系统，配合基础架构部门的服务治理支持灰度发布。<br/></li>
+                <li>收益：发布系统支持Java、Vue类型多版本创建和发布、配合自建服务治理进行流量切换。另一种istio方案被否了，原因是官网指出当时的istio版本会导致请求增加0.8s。<br/></li>
+              </ul>
+            </li>
+            <li>DevOps之代码扫描<br/>
+              <ul>
+                <li>背景：发布系统初期功能完成后，应用发布已经流程化，但是很多开发人员的代码风格并不统一，且容易出现一些风险代码。<br/></li>
+                <li>目标： 支持需求分支代码安全扫描，并做为上线审批依据。<br/></li>
+                <li>收益：集成SonarQube到发布系统，在2个月内100多个Java项目遵循《Java开发规范（阿里版）》进行改造落地完成98%。<br/></li>
+              </ul>
+            </li>
+            <li>DevOps之客户端发布<br/>
+              <ul>
+                <li>背景：IOS和安卓本地编译打包，流程不规范，各大应用商店都需要一个个去上传配置，出现多次配置失误P级故障。<br/></li>
+                <li>目标：支持OA审批、支持热修复发布、支持一键发布各大应用商店<br/></li>
+                <li>收益：完整实现App版本的一键发布、减少人为出错，避免发错包至线上，让产品和业务方甚至也能介入发布流程，提高协作效率，实现App发布实现自动化闭环。<br/></li>
+              </ul>
+            </li>
+            <li>DevOps之二方库发布<br/>
+              <ul>
+                <li>背景：二方包发布这块一直都是开发自己本地上传，多人协作情况下出现快照包覆盖，排查非常浪费效率。<br/></li>
+                <li>目标：支持OA审批、权限全部收拢，发布记录，版本记录<br/></li>
+                <li>收益：收拢发包权限，发布记录，编译日志持久化可回溯，规范化流程，避免很多不规范导致的问题，提升研发效率。<br/></li>
+              </ul>
+            </li>
+            <li>远程Debug工具<br/>
+              <ul>
+                <li>背景：该工具主要解决开发在本地因某些因素无法重现bug，环境因素，数据因素等。<br/></li>
+                <li>目标：在开发环境、测试环境、预发环境支持容器环境下Java、Node应用的远程debug。<br/></li>
+                <li>收益：上线不到5个月，累计使用率1000+。<br/></li>
+              </ul>
+            </li>
+            <li>k8s集群事件告警<br/>
+              <ul>
+                <li>背景：k8s etcd 中默认的 events 事件只保留最近一小时，时间久了无法知道集群当时发生了什么。<br/></li>
+                <li>目标：利用 events 提升 k8s 集群可观察性，提升故障自发现率。<br/></li>
+                <li>收益：支持事件持久化，Warning类型事件直接消息告警到群。帮助排查因Node异常、pod驱逐导致的应用重启等问题多次。<br/></li>
+              </ul>
+            </li>
+            <li>前端容器部署的降本优化<br/>
+              <ul>
+                <li>背景：由于应用架构性质，产生大量前端内部应用，每个应用都是一个容器实例，特性为流量小，占用资源多。<br/></li>
+                <li>目标：通过架构的调整将这些前端后台应用合并，节约集群资源，降低成本。<br/></li>
+                <li>收益：节省容器数1近200个，每月节省近2w云成本。<br/></li>
+              </ul>
+            </li>
+            <li>其他<br/>
+              <ul>
+                <li>参与站点、日志监控的开发；流程化应用水平扩缩容；承担公司访客系统项目的pm，参与开发和推动项目的落地;<br/></li>
+              </ul>
+            </li>
+          </ol>
         </div>
-        <ol class="work-exp_group">
-            <li class="work-exp_list">
-                <p class="exp-list_time">2020.12-至今</p>
-                <div class="exp-list_top">
-                    <img src="https://www.lgstatic.com/images/logo_default.png" alt="公司Logo">
-                    <div class="exp-list_right">
-                        <strong class="exp-list_title">
-                            <span>浙江***品牌管理有限公司</span>
-                            ／
-                            <span>平台和信息安全技术部</span>
-                        </strong>
-                        <p>Java</p>
-                    </div>
-                </div>
-                <div class="tagboard">
-                    <span class="tagboard-tag">k8s</span>
-                    <span class="tagboard-tag">Java</span>
-                    <span class="tagboard-tag">Spring</span>
-                    <span class="tagboard-tag">DevOps</span>
-                    <span class="tagboard-tag">自动化</span>
-                </div>
-                <div class="exp-list_content">
-                    <p>主要工作：开发建设基于Kubernetes的Devops系统，以及日常运维工作。详细内容如下：</p>
-                    <ol>
-                        <li>DevOps之发布系统<br/>
-                            <ul>
-                                <li>背景：早期应用采用Jenkins进行发布，由于其发布时间较长且配置相对复杂，各种操作和源代码分离，非常影响后期维护和扩展。<br/></li>
-                                <li>目的：重建现有发布系统，平台搭建使用Java+Vue技术栈，采用Gitlab+GitlabRunner的方式对K8S集群的应用进行迭代发布，制定发布流程和规范。<br/></li>
-                                <li>收益：支持多分支合并、支持Vue、Java类型应用编译和容器化部署、支持OA审批、自动合并基线、webshell、一键部署探针等初期基本建设。设计了多环境下分支发布区、集成区、非集成区的概念，后来为了让前端基础架构部门也可以写一写业务支持了Node类型应用发布。<br/></li>
-                            </ul>
-                        </li>
-                        <li>DevOps之多版本发布（灰度版本发布）<br/>
-                            <ul>
-                                <li>背景：随着用户体系逐渐升级，对于发布新版本所造成的风险开始重视起来。<br/></li>
-                                <li>目标：升级发布系统，配合基础架构部门的服务治理支持灰度发布。<br/></li>
-                                <li>收益：发布系统支持Java、Vue类型多版本创建和发布、配合自建服务治理进行流量切换。另一种istio方案被否了，原因是官网指出当时的istio版本会导致请求增加0.8s。<br/></li>
-                            </ul>
-                        </li>
-                        <li>DevOps之代码扫描<br/>
-                            <ul>
-                                <li>背景：发布系统初期功能完成后，应用发布已经流程化，但是很多开发人员的代码风格并不统一，且容易出现一些风险代码。<br/></li>
-                                <li>目标： 支持需求分支代码安全扫描，并做为上线审批依据。<br/></li>
-                                <li>收益：集成SonarQube到发布系统，在2个月内100多个Java项目遵循《Java开发规范（阿里版）》进行改造落地完成98%。<br/></li>
-                            </ul>
-                        </li>
-                        <li>DevOps之客户端发布<br/>
-                            <ul>
-                                <li>背景：IOS和安卓本地编译打包，流程不规范，各大应用商店都需要一个个去上传配置，出现多次配置失误P级故障。<br/></li>
-                                <li>目标：支持OA审批、支持热修复发布、支持一键发布各大应用商店<br/></li>
-                                <li>收益：完整实现App版本的一键发布、减少人为出错，避免发错包至线上，让产品和业务方甚至也能介入发布流程，提高协作效率，实现App发布实现自动化闭环。<br/></li>
-                            </ul>
-                        </li>
-                        <li>DevOps之二方库发布<br/>
-                            <ul>
-                                <li>背景：二方包发布这块一直都是开发自己本地上传，多人协作情况下出现快照包覆盖，排查非常浪费效率。<br/></li>
-                                <li>目标：支持OA审批、权限全部收拢，发布记录，版本记录<br/></li>
-                                <li>收益：收拢发包权限，发布记录，编译日志持久化可回溯，规范化流程，避免很多不规范导致的问题，提升研发效率。<br/></li>
-                            </ul>
-                        </li>
-                        <li>远程Debug工具<br/>
-                            <ul>
-                                <li>背景：该工具主要解决开发在本地因某些因素无法重现bug，环境因素，数据因素等。<br/></li>
-                                <li>目标：在开发环境、测试环境、预发环境支持容器环境下Java、Node应用的远程debug。<br/></li>
-                                <li>收益：上线不到5个月，累计使用率1000+。<br/></li>
-                            </ul>
-                        </li>
-                        <li>k8s集群事件告警<br/>
-                            <ul>
-                                <li>背景：k8s etcd 中默认的 events 事件只保留最近一小时，时间久了无法知道集群当时发生了什么。<br/></li>
-                                <li>目标：利用 events 提升 k8s 集群可观察性，提升故障自发现率。<br/></li>
-                                <li>收益：支持事件持久化，Warning类型事件直接消息告警到群。帮助排查因Node异常、pod驱逐导致的应用重启等问题多次。<br/></li>
-                            </ul>
-                        </li>
-                        <li>前端容器部署的降本优化<br/>
-                            <ul>
-                                <li>背景：由于应用架构性质，产生大量前端内部应用，每个应用都是一个容器实例，特性为流量小，占用资源多。<br/></li>
-                                <li>目标：通过架构的调整将这些前端后台应用合并，节约集群资源，降低成本。<br/></li>
-                                <li>收益：节省容器数1近200个，每月节省近2w云成本。<br/></li>
-                            </ul>
-                        </li>
-                        <li>其他<br/>
-                            <ul>
-                                <li>参与站点、日志监控的开发；流程化应用水平扩缩容；承担公司访客系统项目的pm，参与开发和推动项目的落地;<br/></li>
-                            </ul>
-                        </li>
-                    </ol>
-                    <p></p>
-                </div>
-            </li>
-        </ol>
-    </div>
-    <!-- /工作经历 -->
+      </li>
+    </ol>
+  </div>
+  <!-- /工作经历 -->
 
-    <!-- 项目经历 -->
-    <div class="mr-template pro-exp" id="proExp">
-        <div class="mr-template_title">
-            <span>项目经历</span>
+  <!-- 项目经历 -->
+  <div class="mr-template pro-exp" id="proExp">
+    <div class="mr-template_title">
+      <span>项目经历</span>
+    </div>
+    <ol class="pro-exp_group">
+      <li class="pro-exp_list">
+        <p class="exp-list_title">
+          <span class="exp-project_name">童学安家校互通平台</span>
+        </p>
+        <p class="exp-list_time">2016.03-2017.09</p>
+        <div class="exp-project_des">
+          <p>
+            此系统为参赛项目，有网页端和安卓端，采用SpringMVC+Spring+Mybatis框架技术，数据库使用Mysql，并接入GPS定位设备，与无线视频监控设备，获得第十五届山东省大学生软件设计大赛二等奖。
+          </p>
         </div>
-        <ol class="pro-exp_group">
-            <li class="pro-exp_list">
-                <p class="exp-list_title">
-                    <span class="exp-project_name">童学安家校互通平台</span>
-                </p>
-                <p class="exp-list_time">2016.03-2017.09</p>
-                <div class="exp-project_des">
-                    <p>
-                        此系统为参赛项目，有网页端和安卓端，采用SpringMVC+Spring+Mybatis框架，数据库使用Mysql，并接入GPS定位设备，与无线视频监控设备，获得第十五届山东省大学生软件设计大赛二等奖。
-                    </p>
-                </div>
-                <div class="exp-list_content">
-                    <p>这是本人第一次参与完成的软件系统，从前期构想到后期实现上线，在老师和队员的帮助下快速成长，积蓄经验，对自己技术上和思考模式上有很大提升。</p>
-                </div>
-            </li>
-        </ol>
-    </div>
-    <!-- /项目经历 -->
-
-    <!-- 社交主页 -->
-    <div class="mr-template social-page" id="socialPage">
-        <div class="mr-template_title">
-            <span>社交主页</span>
+        <div class="exp-list_content">
+          <p>这是本人第一次参与完成的软件系统，从前期构想到后期实现上线，在老师和队员的帮助下快速成长，积蓄经验，对自己技术上和思考模式上有很大提升。</p>
         </div>
-        <ol class="social-page_group">
-            <li class="social-page_list">
-                <div class="social-page_content">
-                    <img src="https://www.lgstatic.com/common/image/social/github@2x.png" alt="">
-                    <p>https://github.com/saowu</p>
-                </div>
-            </li>
-            <li class="social-page_list">
-                <div class="social-page_content">
-                    <img src="https://www.lgstatic.com/common/image/social/default@2x.png" alt="">
-                    <p>https://saowu.top/</p>
-                </div>
-            </li>
-        </ol>
-    </div>
-    <!-- /社交主页 -->
+      </li>
+    </ol>
+  </div>
+  <!-- /项目经历 -->
 
-    <!-- 图片作品 -->
-    <!-- /图片作品 -->
+  <!-- 社交主页 -->
+  <div class="mr-template social-page" id="socialPage">
+    <div class="mr-template_title">
+      <span>社交主页</span>
+    </div>
+    <ol class="social-page_group">
+      <li class="social-page_list">
+        <div class="social-page_content">
+          <img src="https://www.lgstatic.com/common/image/social/github@2x.png" alt="">
+          <p>https://github.com/saowu</p>
+        </div>
+      </li>
+      <li class="social-page_list">
+        <div class="social-page_content">
+          <img src="https://www.lgstatic.com/common/image/social/default@2x.png" alt="">
+          <p>https://saowu.top</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+  <!-- /社交主页 -->
 </div>
 <script type="text/javascript" crossorigin="anonymous" src="https://www.lagou.com/upload/oss.js?v=1010"></script>
 </body>
