@@ -80,20 +80,20 @@ let experience = new Vue({
         ],
         exp: [
             {
-                time: '2020.12 - Present ',
-                title: '浙江****管理有限公司 - 运维开发',
-                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；熟悉微服务架构及开发；'
+                time: '2022.07 - Present',
+                title: '家家悦集团股份有限公司 - 运维开发',
+                text: '负责Paas服务建设...日常运维工作；进行微服务架构及开发；'
             },
             {
-                time: '2020.07 - 2020.9',
-                title: '山东***电子有限公司 - 软件定制',
+                time: '2020.12 - 2022.07',
+                title: '浙江单创品牌管理有限公司 - 运维开发',
+                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；进行微服务架构及开发；'
+            },
+            {
+                time: '2020.07 - 2020.09',
+                title: '山东***电子有限公司 - 软件开发',
                 text: '使用Springboot+Mybatis+Mysql+RXTX技术开发基于RS-485通讯协议的气体检测系统；'
-            },
-            {
-                time: '2017.12 - 2018.03',
-                title: '山东**信息科技有限公司 - 软件开发',
-                text: '负责某电商平台的部分后台开发，数控设备物联网APP中间件及部分后台开发；'
-            },
+            }
         ],
         loading: 0.2,
         sharedState: store,
@@ -316,6 +316,6 @@ let map = new Vue({
         // 1080*500,1080*460(max)高德限制
         // https://www.google.com/maps google分享
         // http://api.map.baidu.com/lbsapi/createmap/index.html 百度地图
-        src: 'https://surl.amap.com/1INOOShZ2vT',
+        src: 'https://surl.amap.com/2AKDQKe13f2B',
     }
 });
