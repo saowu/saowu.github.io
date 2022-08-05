@@ -86,7 +86,7 @@ let experience = new Vue({
             },
             {
                 time: '2020.12 - 2022.07',
-                title: '浙江单创品牌管理有限公司 - 运维开发',
+                title: 'ACCESS品牌管理集团 - 运维开发',
                 text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；进行微服务架构及开发；'
             },
             {
