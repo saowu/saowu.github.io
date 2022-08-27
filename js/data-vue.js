@@ -173,9 +173,9 @@ let video = new Vue({
         size: 6,
         videos: [
             {
-                'type': 'knowledge',
-                'name': '拉线式手榴弹的原理解释',
-                link: 'https://www.bilibili.com/video/BV1FV411k7n4',
+                'type': 'other',
+                'name': '回村三天，二舅治好了我的精神内耗',
+                link: 'https://www.bilibili.com/video/BV1MN4y177PB',
                 img: 'images/works/video.svg'
             },
             {
