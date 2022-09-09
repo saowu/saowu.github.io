@@ -121,11 +121,11 @@ let blog = new Vue({
                 img: 'images/blog/2.svg'
             },
             {
-                category: 'Java',
-                category_link: 'blog/FWHSehn5o/',
-                title: 'Dataway接口配置工具',
-                create: '2020-06-17',
-                link: 'blog/dzBUfOA4S/',
+                category: 'Docker',
+                category_link: 'blog/p6tPptTlO/',
+                title: '部署Gitlab、Gitlab Runner',
+                create: '2021-10-30',
+                link: 'blog/4FtXVqYj0/',
                 img: 'images/blog/3.svg'
             },
 
@@ -258,28 +258,14 @@ let flink = new Vue({
                 subtext: '在云计算、SDN 网络和容器编排调度等领域具有多年实践经验。'
             },
             {
-                avatar: 'images/avatar-3.svg',
-                link: 'http://alex.hardcreate.cn/blog/index/',
-                name: 'ALEX\'s Blog',
-                subtitle: '欢迎阁下访问我的博客',
-                subtext: '有相同的兴趣的朋友可以联系我一起探讨，对于其中有任何问题请与我联系。'
-            },
-            {
-                avatar: 'https://lafish.fun/images/avatar.png',
+                avatar: 'images/avatar-2.svg',
                 link: 'https://lafish.fun/',
                 name: 'Lafish的部落格',
                 subtitle: '记录某小白的一旬成长',
                 subtext: '在这里记录一下我的大学学习心得，算是一个学习技术生活向的博客。 '
             },
             {
-                avatar: 'images/avatar-3.svg',
-                link: 'https://www.xxxzhy.com/',
-                name: 'XXXZhy',
-                subtitle: 'Better late than never.',
-                subtext: '人生就像一盒巧克力，你永远不知道下一颗是什么味道。'
-            },
-            {
-                avatar: 'images/avatar-3.svg',
+                avatar: 'images/avatar-2.svg',
                 link: 'https://crj0b.com/',
                 name: 'Crj0b\'s Blog',
                 subtitle: '生活,就是生下来,活下去。 ',
@@ -293,7 +279,7 @@ let flink = new Vue({
                 subtext: 'Be brave no matter what your life is like to you. '
             },
             {
-                avatar: 'images/avatar-3.svg',
+                avatar: 'images/avatar-2.svg',
                 link: 'https://blog.pangao.vip/',
                 name: '潘高的小站',
                 subtitle: 'IT套路深，必须瞎折腾',
