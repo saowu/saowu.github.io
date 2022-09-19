@@ -180,9 +180,9 @@ let video = new Vue({
             },
             {
                 'type': 'other',
-                'name': '最 强 单 身 狗',
-                link: 'https://www.bilibili.com/video/BV1Pi4y1j7tU',
-                img: 'images/works/music.svg'
+                'name': '微信公开课【PRO】',
+                link: 'https://www.bilibili.com/video/BV1UB4y1u7t5',
+                img: 'images/works/video.svg'
             },
             {
                 'type': 'music',
