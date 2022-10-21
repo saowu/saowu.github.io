@@ -141,8 +141,8 @@ let services = new Vue({
     data: {
         services: [
             {
-                title: 'Java Development',
-                text: '能熟练使用Java，了解JVM原理。并熟练使用Spring、Mybatis、SpringBoot、Netty等常用框架。',
+                title: 'Back-end Development',
+                text: '能熟练使用Java，了解JVM原理。并熟练使用Spring、Mybatis、SpringBoot、Gin等常用框架。',
                 img: 'images/service-java.svg',
                 color: '#6C6CE5',
                 css: 'text-light shadow-blue',
@@ -156,7 +156,7 @@ let services = new Vue({
             },
             {
                 title: 'Linux Deploy',
-                text: '能熟练使用Linux，进行常见的Kubernetes运维操作，以及安装并配置Docker，Jenkins等。',
+                text: '能熟练使用Linux，进行常见的Kubernetes运维操作，以及Gitlab Runner、Docker，Jenkins等。',
                 img: 'images/service-linux.svg',
                 color: '#F97B8B',
                 css: 'text-light shadow-pink',
