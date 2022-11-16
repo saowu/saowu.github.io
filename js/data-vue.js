@@ -241,10 +241,10 @@ let flink = new Vue({
         sharedState: store,
         skills: [
             'images/client-1.svg',
+            'images/client-9.svg',
             'images/client-2.svg',
             'images/client-3.svg',
             'images/client-4.svg',
-            'images/client-5.svg',
             'images/client-6.svg',
             'images/client-7.svg',
             'images/client-8.svg',
