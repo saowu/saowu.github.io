@@ -44,6 +44,8 @@ Description: Portfolio/CV/Resume HTML Template
 html {
     margin: 0 !important;
     overflow: auto !important;
+    /*黑白滤镜*/
+    filter: grayscale(100%);
 }
 
 body {
