@@ -105,11 +105,11 @@ let blog = new Vue({
     data: {
         posts: [
             {
-                category: 'Python',
+                category: 'Java',
                 category_link: 'blog/mVqrRKBAz/',
-                title: 'FigureBed图床系统',
+                title: 'Jvm对容器环境的支持',
                 create: '2020-04-03',
-                link: 'blog/IVwOk1Phb/',
+                link: 'blog/Jl7Lzwrgj/',
                 img: 'images/blog/1.svg'
             },
             {
@@ -121,11 +121,11 @@ let blog = new Vue({
                 img: 'images/blog/2.svg'
             },
             {
-                category: 'Docker',
+                category: 'Kubernetes',
                 category_link: 'blog/p6tPptTlO/',
-                title: '部署Gitlab、Gitlab Runner',
+                title: '使用Gitlab Runner进行CI/CD',
                 create: '2021-10-30',
-                link: 'blog/4FtXVqYj0/',
+                link: 'blog/9CLvDiHnL/',
                 img: 'images/blog/3.svg'
             },
 
@@ -156,7 +156,7 @@ let services = new Vue({
             },
             {
                 title: 'Linux Deploy',
-                text: '能熟练使用Linux，进行常见的Kubernetes运维操作，以及Gitlab Runner、Docker，Jenkins等。',
+                text: '能熟练使用Linux，进行常见的Kubernetes运维操作，以及Gitlab Runner、KubeSphere，Istio。',
                 img: 'images/service-linux.svg',
                 color: '#F97B8B',
                 css: 'text-light shadow-pink',
