@@ -82,12 +82,12 @@ let experience = new Vue({
             {
                 time: '2022.07 - Present',
                 title: '家家悦集团股份有限公司 - 运维开发',
-                text: '负责PaaS服务建设...日常运维工作；进行微服务架构及开发；'
+                text: '基于Java进行PaaS服务研发建设；日常运维工作；异地混合云架构建设；'
             },
             {
                 time: '2020.12 - 2022.07',
                 title: 'ACCESS品牌管理集团 - 运维开发',
-                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；进行微服务架构及开发；'
+                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；运维自动化建设；'
             },
             {
                 time: '2020.07 - 2020.09',
