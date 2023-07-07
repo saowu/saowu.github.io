@@ -106,7 +106,7 @@ let blog = new Vue({
         posts: [
             {
                 category: 'Java',
-                category_link: 'blog/mVqrRKBAz/',
+                category_link: 'blog/FWHSehn5o/',
                 title: 'Jvm对容器环境的支持',
                 create: '2020-04-03',
                 link: 'blog/Jl7Lzwrgj/',
@@ -122,7 +122,7 @@ let blog = new Vue({
             },
             {
                 category: 'Kubernetes',
-                category_link: 'blog/p6tPptTlO/',
+                category_link: 'blog/NMIC6abAH/',
                 title: '使用Gitlab Runner进行CI/CD',
                 create: '2021-10-30',
                 link: 'blog/9CLvDiHnL/',
