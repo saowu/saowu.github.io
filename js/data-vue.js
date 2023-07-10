@@ -56,7 +56,7 @@ let about = new Vue({
         skills: [
             {key: 'Java', val: 75, color: '#FFD15C'},
             {key: 'Front-end', val: 50, color: '#FF4C60'},
-            {key: 'Linux', val: 40, color: '#6C6CE5'},
+            {key: 'Ops', val: 70, color: '#6C6CE5'},
         ],
         description: '从2016年到如今的技术积累过程中，不断的入门，又不断的放弃，隔天再忿忿的捡起。在这个光怪陆离的世界中，依旧还是个不起眼的菜鸟，希望以后能保持平常心，继续坚持学习，迎接未来！！！',
         cv: 'cv/cv.html',
