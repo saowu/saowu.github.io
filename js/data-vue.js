@@ -64,7 +64,7 @@ let about = new Vue({
             {key: 'Started', val: 2016, icon: 'icon-fire'},
             {key: 'Repositories', val: 37, icon: 'icon-social-github'},
             {key: 'Music', val: 4691, icon: 'icon-music-tone-alt'},
-            {key: 'Articles', val: 37, icon: 'icon-book-open'},
+            {key: 'Articles', val: 45, icon: 'icon-book-open'},
         ],
         sharedState: store,
     }
@@ -81,12 +81,12 @@ let experience = new Vue({
         exp: [
             {
                 time: '2022.07 - Present',
-                title: '家家悦集团股份有限公司 - 运维开发',
+                title: '家家悦集团股份有限公司 - SRE',
                 text: '基于Java进行PaaS服务研发建设；日常运维工作；异地混合云架构建设；'
             },
             {
                 time: '2020.12 - 2022.07',
-                title: 'ACCESS品牌管理集团 - 运维开发',
+                title: 'ACCESS品牌管理集团 - SRE',
                 text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；运维自动化建设；'
             },
             {
@@ -155,8 +155,8 @@ let services = new Vue({
                 css: 'text-dark shadow-yellow',
             },
             {
-                title: 'Linux Deploy',
-                text: '能熟练使用Linux，进行常见的Kubernetes运维操作，以及Gitlab Runner、KubeSphere，Istio。',
+                title: 'Cloud Native',
+                text: '能熟练的进行Kubernetes运维操作，建设DevOps体系，包含Gitlab Runner、KubeSphere，Istio等。',
                 img: 'images/service-linux.svg',
                 color: '#F97B8B',
                 css: 'text-light shadow-pink',
