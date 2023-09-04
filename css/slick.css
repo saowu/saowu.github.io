@@ -320,3 +320,13 @@
     opacity: .75;
     color: black;
 }
+
+.hover-big
+{
+    --f: 1; /* 初始缩放 */
+    transform: scale(var(--f));
+    transition: .5s;
+}
+.hover-big:hover {
+    --f: 1.2;
+}
