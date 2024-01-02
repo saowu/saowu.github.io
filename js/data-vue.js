@@ -54,17 +54,17 @@ let about = new Vue({
     el: '#about',
     data: {
         skills: [
-            {key: 'Java', val: 75, color: '#FFD15C'},
+            {key: 'Java', val: 70, color: '#FFD15C'},
             {key: 'Front-end', val: 50, color: '#FF4C60'},
-            {key: 'Ops', val: 70, color: '#6C6CE5'},
+            {key: 'Ops', val: 75, color: '#6C6CE5'},
         ],
         description: '从2016年到如今的技术积累过程中，不断的入门，又不断的放弃，隔天再忿忿的捡起。在这个光怪陆离的世界中，依旧还是个不起眼的菜鸟，希望以后能保持平常心，继续坚持学习，迎接未来！！！',
         cv: 'cv/cv.html',
         statistics: [
             {key: 'Started', val: 2016, icon: 'icon-fire'},
-            {key: 'Repositories', val: 37, icon: 'icon-social-github'},
-            {key: 'Music', val: 4691, icon: 'icon-music-tone-alt'},
-            {key: 'Articles', val: 45, icon: 'icon-book-open'},
+            {key: 'Repositories', val: 66, icon: 'icon-social-github'},
+            {key: 'Music', val: 9108, icon: 'icon-music-tone-alt'},
+            {key: 'Articles', val: 59, icon: 'icon-book-open'},
         ],
         sharedState: store,
     }
@@ -105,11 +105,11 @@ let blog = new Vue({
     data: {
         posts: [
             {
-                category: 'Java',
-                category_link: 'blog/FWHSehn5o/',
-                title: 'Jvm对容器环境的支持',
-                create: '2020-04-03',
-                link: 'blog/Jl7Lzwrgj/',
+                category: 'Kubernetes',
+                category_link: 'blog/CyaOKIvN7/',
+                title: 'kubernetes使用外部负载均衡',
+                create: '2023-07-04',
+                link: 'blog/CyaOKIvN7/',
                 img: 'images/blog/1.svg'
             },
             {
