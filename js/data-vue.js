@@ -27,6 +27,25 @@ let preloader = new Vue({
                 this.sharedState.isDark = false;
             }
         });
+        window.addEventListener('keydown', function (event) {
+            // 阻止F12
+            if (event.key === "F12") {
+                event.preventDefault();
+                return false;
+            }
+        });
+        window.addEventListener('contextmenu', function (event) {
+            // 阻止右键
+            event.preventDefault();
+        });
+        window.addEventListener('copy', function (event) {
+            // 阻止复制操作
+            event.preventDefault();
+        });
+        window.addEventListener('cut', function (event) {
+            // 阻止剪切操作
+            event.preventDefault();
+        });
     },
 });
 
@@ -75,8 +94,16 @@ let experience = new Vue({
     data: {
         edu: [
             {time: '2019 - 2021', title: '大学本科', text: '就读于山东交通学院，计算机科学与技术专业，业已毕业。'},
-            {time: '2016 - 2019', title: '大学专科', text: '就读于山东电子职业技术学院，软件技术专业。曾获得第十五届山东省大学生软件设计大赛二等奖。'},
-            {time: '2004 - 2016', title: '义务教育', text: '文明礼貌、敬老爱幼、保护环境、讲究卫生、遵纪守法、勤恳敬业、助人为乐。'},
+            {
+                time: '2016 - 2019',
+                title: '大学专科',
+                text: '就读于山东电子职业技术学院，软件技术专业。曾获得第十五届山东省大学生软件设计大赛二等奖。'
+            },
+            {
+                time: '2004 - 2016',
+                title: '义务教育',
+                text: '文明礼貌、敬老爱幼、保护环境、讲究卫生、遵纪守法、勤恳敬业、助人为乐。'
+            },
         ],
         exp: [
             {
