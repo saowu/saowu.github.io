@@ -27,25 +27,6 @@ let preloader = new Vue({
                 this.sharedState.isDark = false;
             }
         });
-        window.addEventListener('keydown', function (event) {
-            // 阻止F12
-            if (event.key === "F12") {
-                event.preventDefault();
-                return false;
-            }
-        });
-        window.addEventListener('contextmenu', function (event) {
-            // 阻止右键
-            event.preventDefault();
-        });
-        window.addEventListener('copy', function (event) {
-            // 阻止复制操作
-            event.preventDefault();
-        });
-        window.addEventListener('cut', function (event) {
-            // 阻止剪切操作
-            event.preventDefault();
-        });
     },
 });
 
