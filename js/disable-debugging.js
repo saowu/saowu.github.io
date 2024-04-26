@@ -20,3 +20,12 @@ document.addEventListener('cut', function (event) {
     // 阻止剪切操作
     event.preventDefault();
 });
+
+setInterval(function () {
+    const startTime = performance.now();
+    debugger;
+    const endTime = performance.now();
+    if (endTime - startTime > 100) {
+        window.location.href = 'about:blank';
+    }
+}, 100);
