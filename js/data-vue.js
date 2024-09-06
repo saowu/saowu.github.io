@@ -149,25 +149,25 @@ let services = new Vue({
     data: {
         services: [
             {
-                title: 'Back-end Development',
-                text: '能熟练使用Java，了解JVM原理。并熟练使用Spring、Mybatis、SpringBoot、Gin等常用框架。',
+                title: 'Development Capability',
+                text: '能熟练使用Java、Go，了解JVM等原理。并熟练使用Spring Cloud、Gin、Vue等常用语言框架。',
                 img: 'images/service-java.svg',
                 color: '#6C6CE5',
                 css: 'text-light shadow-blue',
             },
             {
-                title: 'Front-end Development',
-                text: '能熟练使用Photoshop、Bootstrap、jQuery、ElementUI、Vue独立完成普遍的前端开发。',
-                img: 'images/service-2.svg',
-                color: '#F9D74C',
-                css: 'text-dark shadow-yellow',
-            },
-            {
                 title: 'Cloud Native',
-                text: '能熟练的进行Kubernetes运维操作，建设DevOps体系，包含Gitlab Runner、KubeSphere，Istio等。',
+                text: '能熟练进行Kubernetes运维操作，建设DevOps体系，包含Gitlab Runner、KubeSphere，Istio等。',
                 img: 'images/service-linux.svg',
                 color: '#F97B8B',
                 css: 'text-light shadow-pink',
+            },
+            {
+                title: 'Open Source',
+                text: 'apache/dolphinscheduler、fabric8/kubernetes-client 等开源项目的贡献者，推动社区进步。',
+                img: 'images/service-2.svg',
+                color: '#F9D74C',
+                css: 'text-dark shadow-yellow',
             },
         ],
         sharedState: store,
