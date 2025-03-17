@@ -90,17 +90,12 @@ let experience = new Vue({
             {
                 time: '2022.07 - Present',
                 title: '家家悦集团股份有限公司 - SRE',
-                text: '基于Java进行PaaS服务研发建设；日常运维工作；异地混合云架构建设；'
+                text: '负责PaaS服务开发、运维及微服务架构工作，主导自动化运维体系落地，推动异地混合云架构建设，提升研发效能与系统稳定性；'
             },
             {
                 time: '2020.12 - 2022.07',
                 title: 'ACCESS品牌管理集团 - SRE',
-                text: '使用Java开发基于Kubernetes的DevOps平台；日常运维工作；运维自动化建设；'
-            },
-            {
-                time: '2020.07 - 2020.09',
-                title: '山东***电子有限公司 - 软件开发',
-                text: '使用Springboot+Mybatis+Mysql+RXTX技术开发基于RS-485通讯协议的气体检测系统；'
+                text: '负责导基于 Kubernetes 的 DevOps 平台设计与开发，推动公司容器化与自动化运维体系落地，提升研发效能与系统稳定性；'
             }
         ],
         loading: 0.2,
