@@ -305,6 +305,6 @@ let map = new Vue({
         // 1080*500,1080*460(max)高德限制
         // https://www.google.com/maps google分享
         // http://api.map.baidu.com/lbsapi/createmap/index.html 百度地图
-        src: 'https://surl.amap.com/2AKDQKe13f2B',
+        src: 'https://surl.amap.com/mQc9sFTG2U9',
     }
 });
